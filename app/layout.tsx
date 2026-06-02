@@ -79,6 +79,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'Dz85q464H-B1KDt6dnaypwFxIdqp3NLGbmJ2wdAP2Mk',
   },
+  verification: {
+    google: 'Dz85q464H-B1KDt6dnaypwFxIdqp3NLGbmJ2wdAP2Mk',
+  },
   other: {
     'geo.region': 'US-FL',
     'geo.placename': 'Sanford, Florida',
