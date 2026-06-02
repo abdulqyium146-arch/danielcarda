@@ -76,6 +76,9 @@ export const metadata: Metadata = {
     description: SITE.description,
     images: ['/opengraph-image'],
   },
+  verification: {
+    google: 'Dz85q464H-B1KDt6dnaypwFxIdqp3NLGbmJ2wdAP2Mk',
+  },
   other: {
     'geo.region': 'US-FL',
     'geo.placename': 'Sanford, Florida',
