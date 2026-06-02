@@ -165,7 +165,7 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
                 {[
                   '✅ Florida Licensed & Insured',
                   '⚡ 20-30 Min Response Time',
-                  '⭐ 4.9★ Google Rating (163 Reviews)',
+                  '⭐ 5.0★ Google Rating (14 Reviews)',
                   '💰 Upfront, Transparent Pricing',
                   '🔧 Non-Destructive Methods First',
                   '📅 Available 24/7 — 365 Days',

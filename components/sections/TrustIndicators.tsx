@@ -22,9 +22,9 @@ const indicators = [
   },
   {
     icon: Star,
-    value: '4.9★',
-    label: '163 Reviews',
-    description: 'Consistently top-rated on Google and Yelp by Sanford residents.',
+    value: '5.0★',
+    label: '14 Reviews',
+    description: 'Perfect 5-star rating on Google from real Sanford-area customers.',
     color: 'text-gold-500',
     bg: 'bg-gold-50',
   },

@@ -11,7 +11,7 @@ import { SITE } from '@/lib/constants'
 export const metadata: Metadata = generateMeta({
   title: 'About Daniel Cerda Locksmith — Licensed Locksmith Sanford, FL',
   description:
-    'Daniel Cerda is a Florida-licensed, ALOA-member locksmith with 15+ years of experience serving Sanford, FL and Seminole County. 4.9★ rated, fully insured, 10,000+ jobs completed.',
+    'Daniel Cerda is a Florida-licensed, ALOA-member locksmith with 15+ years of experience serving Sanford, FL and Seminole County. Perfect 5.0★ Google rating, fully insured, 10,000+ jobs completed.',
   path: '/about',
   keywords: [
     'about daniel cerda locksmith',
@@ -93,7 +93,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Daniel Cerda Locksmith was founded in Sanford, Florida with one simple mission: provide honest, professional locksmith services that the community can genuinely rely on. What began as a one-van operation has grown into one of Seminole County&apos;s most trusted locksmith services — built entirely on referrals, repeat customers, and a 4.9-star reputation earned one job at a time.
+                  Daniel Cerda Locksmith was founded in Sanford, Florida with one simple mission: provide honest, professional locksmith services that the community can genuinely rely on. What began as a one-van operation has grown into one of Seminole County&apos;s most trusted locksmith services — built entirely on referrals, repeat customers, and a perfect 5.0-star reputation earned one job at a time.
                 </p>
                 <p>
                   Daniel is a Florida licensed locksmith with over 15 years of hands-on experience in residential, commercial, and automotive locksmithing. His background includes training in the latest high-security lock systems, electronic access control, transponder key programming, and smart home security integration.
@@ -120,8 +120,8 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-5">
                 {[
                   { value: '15+', label: 'Years of Experience' },
-                  { value: '163+', label: 'Google Reviews' },
-                  { value: '4.9★', label: 'Average Rating' },
+                  { value: '14', label: 'Google Reviews' },
+                  { value: '5.0★', label: 'Average Rating' },
                   { value: '10K+', label: 'Jobs Completed' },
                   { value: '24/7', label: 'Availability' },
                   { value: '7', label: 'Cities Served' },
@@ -201,8 +201,8 @@ export default function AboutPage() {
               },
               {
                 icon: Star,
-                title: '4.9★ on Google',
-                body: 'Over 163 verified Google reviews from real Sanford-area customers. Our rating is earned through honest work, not purchased.',
+                title: '5.0★ on Google',
+                body: '14 verified Google reviews — every single one a perfect 5-star. Our rating is earned through honest work and genuine care, not purchased.',
               },
               {
                 icon: CheckCircle,

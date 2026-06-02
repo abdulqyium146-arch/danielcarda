@@ -25,8 +25,8 @@ export function buildLocalBusinessSchema(reviews?: Review[]) {
     aggregateRating: reviews
       ? {
           '@type': 'AggregateRating',
-          ratingValue: 4.9,
-          reviewCount: 163,
+          ratingValue: 5.0,
+          reviewCount: 14,
           bestRating: 5,
           worstRating: 1,
         }

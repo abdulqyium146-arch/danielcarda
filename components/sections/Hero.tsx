@@ -8,7 +8,7 @@ import { SITE } from '@/lib/constants'
 const trustBadges = [
   { icon: Shield, text: 'FL Licensed & Insured' },
   { icon: Clock, text: '20-Min Response' },
-  { icon: Star, text: '4.9★ · 163 Reviews' },
+  { icon: Star, text: '5.0★ · 14 Reviews' },
   { icon: MapPin, text: 'Seminole County, FL' },
 ]
 
@@ -160,13 +160,13 @@ export function Hero() {
           className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 w-72 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6"
         >
           <div className="text-center mb-4">
-            <div className="text-4xl font-bold text-white mb-1">4.9★</div>
+            <div className="text-4xl font-bold text-white mb-1">5.0★</div>
             <div className="flex justify-center gap-0.5 mb-1">
               {[...Array(5)].map((_, i) => (
                 <span key={i} className="text-gold-400 text-lg">★</span>
               ))}
             </div>
-            <p className="text-gray-300 text-sm">163 Google Reviews · Since 2008</p>
+            <p className="text-gray-300 text-sm">14 Google Reviews · Since 2008</p>
           </div>
           <div className="border-t border-white/20 pt-4 space-y-2.5 mb-4">
             {[

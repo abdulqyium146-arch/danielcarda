@@ -235,7 +235,7 @@ export function ServiceCityTemplate({ service, area, schemaJson, breadcrumbSchem
                 {[
                   '✅ Florida Licensed & Insured',
                   `⚡ ${area.isPrimary ? '~20 min' : '25–40 min'} to ${area.city}`,
-                  '⭐ 4.9★ Google Rating (163 Reviews)',
+                  '⭐ 5.0★ Google Rating (14 Reviews)',
                   '💰 Upfront Transparent Pricing',
                   '🔧 Non-Destructive Methods First',
                   '📅 Available 24/7 — 365 Days',

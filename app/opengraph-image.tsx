@@ -132,7 +132,7 @@ export default function OGImage() {
             marginBottom: '36px',
           }}
         >
-          Licensed &amp; Insured · 20-Min Response · 4.9★ Rated
+          Licensed &amp; Insured · 20-Min Response · 5.0★ Rated
         </div>
 
         {/* Phone + address */}

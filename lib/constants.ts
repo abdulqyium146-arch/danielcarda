@@ -18,8 +18,8 @@ export const SITE = {
     structured: 'Mo-Su 00:00-23:59',
   },
   geo: {
-    lat: 28.8028,
-    lng: -81.2681,
+    lat: 28.701739,
+    lng: -81.3532056,
   },
   social: {
     facebook: 'https://www.facebook.com/danielcerdalocksmith',
@@ -47,8 +47,8 @@ export const SITE = {
   license: 'Florida Licensed & Insured Locksmith',
   founded: '2008',
   yearsExperience: '15+',
-  reviewCount: '150+',
-  rating: 4.9,
+  reviewCount: '14',
+  rating: 5.0,
   responseTime: '20-30 minutes',
   serviceRadius: '30 miles of Sanford, FL',
 }

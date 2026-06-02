@@ -33,8 +33,8 @@ const reasons = [
   },
   {
     number: '06',
-    title: 'Verified 4.9-Star Reviews',
-    description: 'Over 163 verified Google reviews from real Sanford-area customers. Our reputation is built one satisfied customer at a time, and we take every review seriously.',
+    title: 'Perfect 5.0-Star Rating',
+    description: '14 verified Google reviews — every single one a 5-star. Our reputation is built one satisfied customer at a time, and we take every review seriously.',
   },
 ]
 
