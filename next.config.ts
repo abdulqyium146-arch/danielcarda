@@ -14,9 +14,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-    optimizeCss: true,
-  },
   compress: true,
   poweredByHeader: false,
   async headers() {
