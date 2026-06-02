@@ -2,8 +2,8 @@ export const SITE = {
   name: 'Daniel Cerda Locksmith',
   shortName: 'DCL',
   url: 'https://dcerdalocksmith.com',
-  phone: '(407) 890-4567',
-  phoneHref: 'tel:+14078904567',
+  phone: '(855) 633-0750',
+  phoneHref: 'tel:+18556330750',
   email: 'info@dcerdalocksmith.com',
   address: {
     street: '151 Wildwood Dr',

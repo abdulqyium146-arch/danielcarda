@@ -65,7 +65,7 @@ Even the best deadbolt can be compromised by poor installation. A deadbolt that'
 
 Daniel Cerda Locksmith provides professional lock installation throughout Sanford and Seminole County. We ensure proper alignment, use reinforced strike plates, and test every installation thoroughly.
 
-**Ready to upgrade? Call us at (407) 890-4567 for a free security assessment.**
+**Ready to upgrade? Call us at (855) 633-0750 for a free security assessment.**
     `,
     date: '2024-10-15',
     author: 'Daniel Cerda',
@@ -117,7 +117,7 @@ If a child or pet is locked in a hot car, **call 911 immediately**. Florida temp
 
 Professional car lockout service from Daniel Cerda Locksmith starts at $65. We provide a firm quote over the phone before dispatching. There are no hidden fees.
 
-**Need help right now? Call (407) 890-4567 — we're available 24/7.**
+**Need help right now? Call (855) 633-0750 — we're available 24/7.**
     `,
     date: '2024-09-22',
     author: 'Daniel Cerda',
@@ -182,7 +182,7 @@ Absolutely. Some homeowners rekey the locks they want to keep and replace the on
 
 While rekeying kits exist for DIY use, improper rekeying can leave your lock partially functional or damage the cylinder — potentially requiring an expensive replacement anyway. Professional rekeying from Daniel Cerda Locksmith costs little more than a DIY kit and comes with the guarantee that the job is done right.
 
-**Call (407) 890-4567 to schedule your rekeying or lock replacement in Sanford, FL.**
+**Call (855) 633-0750 to schedule your rekeying or lock replacement in Sanford, FL.**
     `,
     date: '2024-08-10',
     author: 'Daniel Cerda',
@@ -256,7 +256,7 @@ Smart lock installation requires precise alignment, proper door prep, and config
 
 Daniel Cerda Locksmith installs all major smart lock brands throughout Sanford and Seminole County. We handle the full setup — including app configuration, code programming, and showing you how to use all the features.
 
-**Call (407) 890-4567 to schedule your smart lock installation.**
+**Call (855) 633-0750 to schedule your smart lock installation.**
     `,
     date: '2024-07-05',
     author: 'Daniel Cerda',
