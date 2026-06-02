@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  body {
+    @apply bg-white text-dark antialiased;
+    font-family: var(--font-inter);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    line-height: 1.2;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gold-500 hover:bg-gold-400 text-dark font-bold rounded-lg transition-all duration-200 shadow-md hover:shadow-glow-gold active:scale-95 whitespace-nowrap;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 text-primary-900 font-bold rounded-lg transition-all duration-200 border-2 border-primary-900 whitespace-nowrap;
+  }
+
+  .btn-emergency {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-emergency-600 hover:bg-emergency-700 text-white font-bold rounded-lg transition-all duration-200 shadow-emergency whitespace-nowrap;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent hover:bg-white/10 text-white font-bold rounded-lg border-2 border-white transition-all duration-200 whitespace-nowrap;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-gray-100 p-6 hover:shadow-card-hover transition-shadow duration-300;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .section-label {
+    @apply text-gold-600 font-semibold text-sm uppercase tracking-widest mb-3;
+  }
+
+  .phone-number {
+    @apply text-gold-500 font-bold hover:text-gold-400 transition-colors;
+  }
+
+  .prose-custom {
+    @apply prose prose-lg max-w-none;
+    @apply prose-headings:text-primary-900 prose-headings:font-bold;
+    @apply prose-p:text-gray-700 prose-p:leading-relaxed;
+    @apply prose-a:text-primary-700 prose-a:font-semibold prose-a:no-underline hover:prose-a:text-primary-900;
+    @apply prose-strong:text-primary-900;
+    @apply prose-ul:text-gray-700;
+    @apply prose-table:text-sm;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 60%, #1D4ED8 100%);
+  }
+
+  .emergency-gradient {
+    background: linear-gradient(135deg, #991B1B 0%, #DC2626 100%);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #FCD34D 100%);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #D97706, #F59E0B, #FCD34D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .floating-cta {
+    @apply fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .transition-standard {
+    @apply transition-all duration-200 ease-in-out;
+  }
+}
+
+/* Custom animations for trust badges */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Phone pulse animation */
+@keyframes phonePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+}
+
+.phone-pulse {
+  animation: phonePulse 2s ease-in-out infinite;
+}
+
+/* Smooth scroll behavior */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

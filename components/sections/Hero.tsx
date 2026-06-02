@@ -1,0 +1,158 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Phone, Shield, Clock, Star, ChevronRight } from 'lucide-react'
+import { SITE } from '@/lib/constants'
+
+const trustBadges = [
+  { icon: Shield, text: 'Licensed & Insured' },
+  { icon: Clock, text: '20-Min Response' },
+  { icon: Star, text: '4.9★ Rating' },
+]
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.6, ease: 'easeOut' },
+  }),
+}
+
+export function Hero() {
+  return (
+    <section
+      className="relative min-h-[90vh] flex items-center hero-gradient overflow-hidden bg-hero-pattern"
+      aria-label="Hero section"
+    >
+      {/* Background decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 right-0 w-96 h-96 bg-primary-700/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container-custom relative z-10 py-20">
+        <div className="max-w-3xl">
+          {/* Emergency badge */}
+          <motion.div
+            custom={0}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="inline-flex items-center gap-2 bg-emergency-600/20 border border-emergency-500/40 text-emergency-400 px-4 py-2 rounded-full text-sm font-semibold mb-6"
+          >
+            <span className="w-2 h-2 bg-emergency-500 rounded-full animate-pulse-slow" />
+            Available 24/7 — Fast Emergency Response
+          </motion.div>
+
+          {/* Headline */}
+          <motion.h1
+            custom={1}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 text-shadow-lg"
+          >
+            Sanford&apos;s{' '}
+            <span className="text-gradient-gold">Most Trusted</span>{' '}
+            Locksmith
+          </motion.h1>
+
+          {/* Subheadline */}
+          <motion.p
+            custom={2}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="text-xl text-gray-300 leading-relaxed mb-8 max-w-xl"
+          >
+            Licensed, insured, and available around the clock. Whether you&apos;re locked out of your home, car, or business — we arrive in{' '}
+            <strong className="text-white">20 to 30 minutes</strong>, guaranteed.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            custom={3}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10"
+          >
+            <a
+              href={SITE.phoneHref}
+              className="group flex items-center gap-3 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-primary-950 font-bold text-lg rounded-xl shadow-glow-gold transition-all duration-200 active:scale-95"
+            >
+              <Phone className="w-5 h-5 animate-ring" />
+              Call {SITE.phone}
+            </a>
+            <Link
+              href="/contact"
+              className="group flex items-center gap-2 px-8 py-4 border-2 border-white/30 hover:border-white text-white font-bold rounded-xl transition-all duration-200"
+            >
+              Get a Free Quote
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+
+          {/* Trust badges */}
+          <motion.div
+            custom={4}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="flex flex-wrap items-center gap-4"
+          >
+            {trustBadges.map(({ icon: Icon, text }) => (
+              <div
+                key={text}
+                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2"
+              >
+                <Icon className="w-4 h-4 text-gold-400" />
+                <span className="text-sm text-white font-medium">{text}</span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Floating card */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
+          className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 w-72 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6"
+        >
+          <div className="text-center mb-4">
+            <div className="text-4xl font-bold text-white mb-1">4.9★</div>
+            <div className="flex justify-center gap-0.5 mb-1">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-gold-400 text-lg">★</span>
+              ))}
+            </div>
+            <p className="text-gray-300 text-sm">163 Google Reviews</p>
+          </div>
+          <div className="border-t border-white/20 pt-4 space-y-2.5">
+            {[
+              { label: 'Response Time', value: '~25 min' },
+              { label: 'Service Area', value: '30+ miles' },
+              { label: 'Experience', value: '15+ years' },
+              { label: 'Availability', value: '24/7/365' },
+            ].map(({ label, value }) => (
+              <div key={label} className="flex justify-between items-center text-sm">
+                <span className="text-gray-400">{label}</span>
+                <span className="text-white font-semibold">{value}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Bottom wave */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+          <path d="M0 80L1440 80L1440 40C1200 80 800 0 400 40C200 60 80 80 0 80Z" fill="white" />
+        </svg>
+      </div>
+    </section>
+  )
+}

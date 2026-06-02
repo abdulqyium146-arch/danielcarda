@@ -1,0 +1,662 @@
+export interface Service {
+  slug: string
+  title: string
+  shortTitle: string
+  description: string
+  longDescription: string
+  icon: string
+  category: 'emergency' | 'residential' | 'commercial' | 'automotive'
+  price: string
+  responseTime?: string
+  benefits: string[]
+  process: string[]
+  faqs: { question: string; answer: string }[]
+  keywords: string[]
+  metaTitle: string
+  metaDescription: string
+  featured: boolean
+}
+
+export const services: Service[] = [
+  {
+    slug: 'emergency-locksmith',
+    title: 'Emergency Locksmith Services',
+    shortTitle: 'Emergency Locksmith',
+    description: 'Locked out? We arrive fast — 20 to 30 minutes anywhere in Sanford and surrounding areas.',
+    longDescription: `When a lock emergency strikes, every minute counts. Daniel Cerda Locksmith provides rapid-response emergency locksmith services throughout Sanford, FL and the surrounding Seminole County area. Whether you're locked out of your home at midnight, stranded next to your car in a parking lot, or locked out of your business during a critical moment, our licensed technicians are ready to respond.\n\nWe operate 24 hours a day, 7 days a week, 365 days a year — including holidays. Our fully equipped mobile service vehicles mean we carry the tools and equipment needed to resolve virtually any lock emergency on the first visit. No waiting, no runaround — just fast, professional service when you need it most.`,
+    icon: 'AlertCircle',
+    category: 'emergency',
+    price: 'Starting at $75',
+    responseTime: '20-30 minutes',
+    benefits: [
+      '24/7 availability including holidays',
+      'Fast 20-30 minute response time',
+      'No hidden fees — upfront pricing',
+      'Licensed and insured technicians',
+      'Non-destructive entry methods',
+      'All locks and vehicles serviced',
+    ],
+    process: [
+      'Call us and describe your situation — we assess immediately',
+      'We dispatch the nearest available technician',
+      'Technician arrives in 20-30 minutes with all equipment',
+      'Fast, non-destructive resolution with upfront pricing',
+    ],
+    faqs: [
+      {
+        question: 'How fast can you arrive for an emergency lockout in Sanford?',
+        answer: 'Our average response time in Sanford is 20 to 30 minutes. We have technicians stationed throughout Seminole County to minimize your wait time.',
+      },
+      {
+        question: 'Do you charge more for late-night emergency calls?',
+        answer: 'We believe in transparent pricing. We will always quote you the price before starting any work. Some after-hours services may carry a small additional fee, but we will tell you upfront.',
+      },
+      {
+        question: 'Can you open my lock without damaging it?',
+        answer: 'In the vast majority of cases, yes. Our technicians are trained in non-destructive entry methods and will always attempt to open your lock without damage before considering any other approach.',
+      },
+    ],
+    keywords: [
+      'emergency locksmith sanford fl',
+      '24/7 locksmith sanford',
+      'locksmith near me sanford florida',
+      'emergency lockout service sanford',
+      'after hours locksmith sanford fl',
+    ],
+    metaTitle: '24/7 Emergency Locksmith Sanford FL — 20-Minute Response',
+    metaDescription: 'Locked out in Sanford, FL? Daniel Cerda Locksmith provides 24/7 emergency locksmith services with a 20-30 minute response time. Licensed & insured. Call now.',
+    featured: true,
+  },
+  {
+    slug: 'residential-locksmith',
+    title: 'Residential Locksmith Services',
+    shortTitle: 'Residential Locksmith',
+    description: 'Complete home security solutions — lock installation, rekeying, repair, and smart locks for Sanford homeowners.',
+    longDescription: `Your home is your most important asset, and your locks are its first line of defense. Daniel Cerda Locksmith offers comprehensive residential locksmith services for homeowners throughout Sanford, FL and Seminole County. From simple lock repairs to full home security upgrades, we have the experience and expertise to protect what matters most.\n\nWe service all major lock brands including Schlage, Kwikset, Baldwin, Medeco, and more. Whether you've just moved into a new home, want to upgrade your security, or need emergency assistance, we're here to help.`,
+    icon: 'Home',
+    category: 'residential',
+    price: 'Starting at $65',
+    benefits: [
+      'Servicing all major lock brands',
+      'New homeowner rekeying packages',
+      'Smart lock installation and setup',
+      'Security consultation included',
+      'Same-day service available',
+      'Licensed and insured professionals',
+    ],
+    process: [
+      'Schedule your service — same-day appointments available',
+      'Our technician arrives and assesses your current security',
+      'We provide recommendations and an upfront quote',
+      'Professional service completed to your satisfaction',
+    ],
+    faqs: [
+      {
+        question: 'Should I rekey or replace my locks when I move into a new home?',
+        answer: 'We recommend rekeying at minimum. This is cost-effective and ensures previous occupants or anyone who had a key can no longer access your home. If your locks are outdated or worn, a full replacement may be better.',
+      },
+      {
+        question: 'How long does rekeying a home take?',
+        answer: 'For a typical single-family home with 2-4 exterior locks, rekeying takes about 30-60 minutes.',
+      },
+      {
+        question: 'Do you install smart locks?',
+        answer: 'Yes, we install and configure all major smart lock brands including Schlage Encode, Kwikset Halo, August, Yale, and more.',
+      },
+    ],
+    keywords: [
+      'residential locksmith sanford fl',
+      'home locksmith sanford',
+      'house lockout sanford fl',
+      'rekey home sanford florida',
+      'lock installation sanford fl',
+    ],
+    metaTitle: 'Residential Locksmith Sanford FL | Home Lock Services',
+    metaDescription: 'Professional residential locksmith services in Sanford, FL. Lock installation, rekeying, repair, and smart locks. Licensed & insured. Same-day service available.',
+    featured: true,
+  },
+  {
+    slug: 'commercial-locksmith',
+    title: 'Commercial Locksmith Services',
+    shortTitle: 'Commercial Locksmith',
+    description: 'Secure your business with professional-grade lock systems, master key systems, and access control in Sanford.',
+    longDescription: `Business security requires more than a standard deadbolt. Daniel Cerda Locksmith provides professional commercial locksmith services for businesses of all sizes throughout Sanford, FL and Seminole County. From retail shops and office buildings to warehouses and medical facilities, we understand the unique security challenges businesses face.\n\nOur commercial services include master key system design, high-security lock installation, panic bar hardware, access control systems, and more. We work after-hours and on weekends to minimize disruption to your operations.`,
+    icon: 'Building2',
+    category: 'commercial',
+    price: 'Starting at $95',
+    benefits: [
+      'Master key system design and installation',
+      'High-security commercial grade locks',
+      'Access control and keypad systems',
+      'After-hours service to minimize downtime',
+      'Business lockout response',
+      'Panic bar and exit device installation',
+    ],
+    process: [
+      'On-site security assessment of your business',
+      'Custom security solution recommendation',
+      'Professional installation with minimal disruption',
+      'Staff training and key system documentation',
+    ],
+    faqs: [
+      {
+        question: 'What is a master key system?',
+        answer: 'A master key system allows one key to open multiple locks while individual keys only open specific doors. It gives business owners control over access without needing dozens of different keys.',
+      },
+      {
+        question: 'Can you service commercial buildings after business hours?',
+        answer: 'Absolutely. We offer after-hours commercial service to avoid disrupting your business operations.',
+      },
+      {
+        question: 'Do you install access control systems?',
+        answer: 'Yes, we install keypad entry, key fob systems, and card reader access control systems compatible with most commercial requirements.',
+      },
+    ],
+    keywords: [
+      'commercial locksmith sanford fl',
+      'business locksmith sanford',
+      'master key system sanford florida',
+      'commercial lock installation sanford',
+      'access control sanford fl',
+    ],
+    metaTitle: 'Commercial Locksmith Sanford FL | Business Security Solutions',
+    metaDescription: 'Professional commercial locksmith services in Sanford, FL. Master key systems, access control, high-security locks. Licensed & insured. Call for a free assessment.',
+    featured: true,
+  },
+  {
+    slug: 'automotive-locksmith',
+    title: 'Automotive Locksmith Services',
+    shortTitle: 'Automotive Locksmith',
+    description: 'Car lockouts, key replacement, transponder programming, and ignition repair — all vehicles, all makes.',
+    longDescription: `Car lock and key problems can leave you stranded at the worst possible time. Daniel Cerda Locksmith provides comprehensive automotive locksmith services throughout Sanford, FL and surrounding areas. We handle everything from simple car lockouts to complex transponder key programming, all at a fraction of dealership prices.\n\nOur mobile automotive locksmith units carry the latest key cutting and programming equipment, allowing us to make new keys on-site for most vehicles. We service all makes and models including domestic, import, luxury, and fleet vehicles.`,
+    icon: 'Car',
+    category: 'automotive',
+    price: 'Starting at $85',
+    responseTime: '20-30 minutes',
+    benefits: [
+      'All makes and models serviced',
+      'On-site key cutting and programming',
+      'Transponder and smart key programming',
+      'Ignition repair and replacement',
+      'Significantly less than dealership pricing',
+      '24/7 availability',
+    ],
+    process: [
+      'Call with your vehicle year, make, and model',
+      'We dispatch to your location with proper equipment',
+      'Non-destructive entry and key services on-site',
+      'Quick turnaround — most jobs completed in 30-60 minutes',
+    ],
+    faqs: [
+      {
+        question: 'Can you make a car key without the original?',
+        answer: 'Yes. We can cut and program new keys from your VIN number and vehicle information in most cases. We may need proof of ownership.',
+      },
+      {
+        question: 'Is it cheaper to use a locksmith than the dealership for car keys?',
+        answer: 'In most cases, significantly so. Dealerships often charge 2-3x more for the same key programming service. We provide the same quality at a better price.',
+      },
+      {
+        question: 'Do you program transponder and smart keys?',
+        answer: 'Yes. We have professional-grade automotive key programming equipment compatible with thousands of vehicle models.',
+      },
+    ],
+    keywords: [
+      'automotive locksmith sanford fl',
+      'car key replacement sanford',
+      'transponder key programming sanford fl',
+      'car lockout sanford florida',
+      'auto locksmith sanford fl',
+    ],
+    metaTitle: 'Automotive Locksmith Sanford FL | Car Keys & Lockouts',
+    metaDescription: 'Professional automotive locksmith in Sanford, FL. Car lockouts, key replacement, transponder programming. All makes and models. Much less than dealership prices. Call now.',
+    featured: true,
+  },
+  {
+    slug: 'car-lockout',
+    title: 'Car Lockout Service',
+    shortTitle: 'Car Lockout',
+    description: 'Locked out of your car in Sanford? We\'ll have you back inside in minutes — available 24/7.',
+    longDescription: `Being locked out of your car is stressful, but help is closer than you think. Daniel Cerda Locksmith provides fast car lockout services throughout Sanford and Seminole County. Our trained automotive locksmiths use professional, non-destructive tools to get you back in your vehicle quickly — without damaging your car's locks, windows, or door panels.\n\nWe respond to car lockouts at homes, parking lots, shopping centers, gas stations, highways, and anywhere else in our service area. Day or night, weekday or weekend — we're always on call.`,
+    icon: 'CarFront',
+    category: 'automotive',
+    price: 'Starting at $65',
+    responseTime: '20-30 minutes',
+    benefits: [
+      'Non-destructive entry — no damage to your vehicle',
+      '24/7 response including nights and weekends',
+      'Serving all locations in Sanford area',
+      'All makes and models',
+      'Upfront pricing before we start',
+      'Licensed and insured technicians',
+    ],
+    process: [
+      'Call us and provide your location and vehicle information',
+      'We dispatch immediately to your location',
+      'Technician arrives with proper tools in 20-30 minutes',
+      'Non-destructive unlock — you\'re back in your car quickly',
+    ],
+    faqs: [
+      {
+        question: 'How long does it take to unlock a car in Sanford?',
+        answer: 'Our average arrival time is 20-30 minutes, and the actual unlocking process typically takes just minutes once we arrive.',
+      },
+      {
+        question: 'Will you damage my car to get inside?',
+        answer: 'No. We use professional automotive lockout tools and techniques designed specifically to unlock cars without any damage.',
+      },
+      {
+        question: 'What if my keys are locked inside a running car?',
+        answer: 'This is actually a common emergency. Call us right away — we prioritize running-engine lockouts for safety.',
+      },
+    ],
+    keywords: [
+      'car lockout sanford fl',
+      'locked out of car sanford',
+      'auto lockout service sanford florida',
+      'car unlock sanford fl',
+      'vehicle lockout sanford',
+    ],
+    metaTitle: 'Car Lockout Service Sanford FL | Unlocked in 30 Minutes',
+    metaDescription: 'Locked out of your car in Sanford, FL? Daniel Cerda Locksmith provides fast, non-destructive car lockout service. 24/7 available. We arrive in 20-30 minutes. Call now.',
+    featured: false,
+  },
+  {
+    slug: 'house-lockout',
+    title: 'House Lockout Service',
+    shortTitle: 'House Lockout',
+    description: 'Locked out of your home? Our residential locksmiths respond fast across Sanford, FL — 24/7.',
+    longDescription: `Getting locked out of your own home is one of the most frustrating experiences possible. Whether you've lost your keys, locked them inside, or your lock has failed, Daniel Cerda Locksmith provides fast, professional house lockout services throughout Sanford and Seminole County.\n\nOur residential locksmiths arrive quickly and use professional techniques to open your door with minimal or no damage. We'll always try the least-invasive method first and will provide an honest assessment before doing any work.`,
+    icon: 'DoorOpen',
+    category: 'residential',
+    price: 'Starting at $65',
+    responseTime: '20-30 minutes',
+    benefits: [
+      'Fast response to your home address',
+      '24/7 service including late nights',
+      'Non-destructive entry attempted first',
+      'All lock types serviced',
+      'Licensed Florida locksmith',
+      'Upfront honest pricing',
+    ],
+    process: [
+      'Call us with your address and lock type if known',
+      'We dispatch the nearest available residential technician',
+      'Technician arrives and assesses your lock situation',
+      'Professional entry using the least-invasive method',
+    ],
+    faqs: [
+      {
+        question: 'Can you open my door without breaking the lock?',
+        answer: 'In most cases, yes. We use professional lock picking and bypass tools. If the lock is damaged or pick-resistant, we discuss options with you first.',
+      },
+      {
+        question: 'What if I can\'t prove I live there?',
+        answer: 'We may ask for ID that matches the address. We take this verification step seriously to protect homeowners.',
+      },
+      {
+        question: 'Should I rekey my locks after a lockout?',
+        answer: 'If you lost your keys, we strongly recommend rekeying to ensure no one else can use them to enter your home. We can do this during the same visit.',
+      },
+    ],
+    keywords: [
+      'house lockout sanford fl',
+      'locked out of house sanford',
+      'home lockout service sanford florida',
+      'residential lockout sanford fl',
+      'locked out of home sanford',
+    ],
+    metaTitle: 'House Lockout Service Sanford FL | Fast Home Lockout Help',
+    metaDescription: 'Locked out of your house in Sanford, FL? Daniel Cerda Locksmith provides 24/7 residential lockout service. Non-destructive entry. 20-30 minute response. Call now.',
+    featured: false,
+  },
+  {
+    slug: 'business-lockout',
+    title: 'Business Lockout Service',
+    shortTitle: 'Business Lockout',
+    description: 'Locked out of your business? We respond fast to commercial lockouts across Sanford 24/7.',
+    longDescription: `A business lockout can cost you money every minute it continues. Daniel Cerda Locksmith understands the urgency of commercial lockouts and provides priority response service for businesses throughout Sanford, FL and Seminole County.\n\nWhether you're locked out of your office, retail store, warehouse, or any other commercial property, our commercial locksmiths have the tools and expertise to get you back inside quickly and professionally.`,
+    icon: 'KeyRound',
+    category: 'commercial',
+    price: 'Starting at $85',
+    responseTime: '20-30 minutes',
+    benefits: [
+      'Priority response for business emergencies',
+      'Commercial-grade lock expertise',
+      'All commercial lock types serviced',
+      'Minimal disruption to your business',
+      '24/7 availability including holidays',
+      'Comprehensive follow-up security review available',
+    ],
+    process: [
+      'Call us immediately — we prioritize business lockouts',
+      'Provide your business address and lock type',
+      'Our commercial specialist arrives quickly',
+      'Professional entry and optional security assessment',
+    ],
+    faqs: [
+      {
+        question: 'How fast can you respond to a business lockout in Sanford?',
+        answer: 'We typically arrive within 20-30 minutes anywhere in our Sanford service area.',
+      },
+      {
+        question: 'Can you handle high-security commercial locks?',
+        answer: 'Yes. We are experienced with high-security commercial lock systems including Medeco, Mul-T-Lock, ASSA Abloy, and more.',
+      },
+      {
+        question: 'Do you provide emergency after-hours business lockout service?',
+        answer: 'Absolutely. We provide 24/7 commercial lockout service including nights, weekends, and holidays.',
+      },
+    ],
+    keywords: [
+      'business lockout sanford fl',
+      'commercial lockout sanford',
+      'office lockout sanford florida',
+      'store lockout sanford fl',
+      'commercial locksmith emergency sanford',
+    ],
+    metaTitle: 'Business Lockout Service Sanford FL | Commercial Locksmith',
+    metaDescription: 'Locked out of your business in Sanford, FL? Daniel Cerda Locksmith provides fast 24/7 commercial lockout service. Get back to business in minutes. Call now.',
+    featured: false,
+  },
+  {
+    slug: 'rekeying',
+    title: 'Lock Rekeying Services',
+    shortTitle: 'Rekeying',
+    description: 'Rekey your locks quickly and affordably — the smart security upgrade for new homeowners and businesses.',
+    longDescription: `Rekeying is one of the most cost-effective security upgrades you can make. Instead of replacing your entire lock, a locksmith changes the internal pins and tumbler of your existing lock so that old keys no longer work and only new keys will open it. The result is complete security without the cost of new hardware.\n\nDaniel Cerda Locksmith provides professional rekeying services for residential and commercial properties throughout Sanford, FL. We recommend rekeying whenever you move into a new home, after losing keys, or after a tenant or employee who had access to keys leaves.`,
+    icon: 'RefreshCw',
+    category: 'residential',
+    price: 'Starting at $25 per lock',
+    benefits: [
+      'More affordable than replacing locks',
+      'Same security result as new locks',
+      'Quick 30-60 minute service',
+      'New keys cut on-site',
+      'All major lock brands serviced',
+      'Ideal for new homeowners and renters',
+    ],
+    process: [
+      'We assess your current locks and hardware',
+      'Remove and disassemble each lock cylinder',
+      'Replace internal pins to match new key profile',
+      'Cut new keys on-site and test all locks',
+    ],
+    faqs: [
+      {
+        question: 'Is rekeying as secure as replacing my locks?',
+        answer: 'For most situations, yes. Rekeying changes which key operates the lock, making all previous keys ineffective. If your locks are old or low-quality, replacement may be worth considering.',
+      },
+      {
+        question: 'How much does rekeying cost in Sanford, FL?',
+        answer: 'Rekeying typically starts at $25 per lock cylinder, plus a service call fee. We can rekey your entire home for a fraction of the cost of replacement.',
+      },
+      {
+        question: 'Can you rekey all my locks to one key?',
+        answer: 'Yes! This is called a keyed-alike setup. We can rekey all your door locks so one key opens all of them, which is very convenient.',
+      },
+    ],
+    keywords: [
+      'rekeying locks sanford fl',
+      'rekey house sanford florida',
+      'lock rekeying service sanford',
+      'rekey locks sanford fl',
+      'how much to rekey locks sanford',
+    ],
+    metaTitle: 'Lock Rekeying Service Sanford FL | Affordable Rekeying',
+    metaDescription: 'Professional lock rekeying in Sanford, FL starting at $25/lock. Change your locks without replacing them. New homeowner specials available. Licensed locksmith. Call now.',
+    featured: false,
+  },
+  {
+    slug: 'lock-repair',
+    title: 'Lock Repair Services',
+    shortTitle: 'Lock Repair',
+    description: 'Fix sticky, broken, or damaged locks quickly and affordably throughout Sanford, FL.',
+    longDescription: `A malfunctioning lock is not just inconvenient — it can be a serious security risk. Daniel Cerda Locksmith provides professional lock repair services for residential, commercial, and automotive locks throughout Sanford, FL and Seminole County.\n\nFrom sticky deadbolts and worn keyways to broken lock mechanisms and damaged door hardware, our experienced locksmiths can diagnose and repair virtually any lock problem. In many cases, a repair is significantly more affordable than a full replacement.`,
+    icon: 'Wrench',
+    category: 'residential',
+    price: 'Starting at $55',
+    benefits: [
+      'Often less expensive than replacement',
+      'All lock brands and types serviced',
+      'Same-day service available',
+      'Honest diagnosis — repair vs replace recommendation',
+      'Commercial and residential lock repair',
+      'Broken key extraction included when needed',
+    ],
+    process: [
+      'Technician diagnoses the issue with your lock',
+      'Honest recommendation: repair or replace',
+      'Professional repair using quality parts',
+      'Functionality test before we leave',
+    ],
+    faqs: [
+      {
+        question: 'Can you extract a broken key from my lock?',
+        answer: 'Yes. Broken key extraction is one of our common services. We can typically remove a broken key without damaging the lock in most cases.',
+      },
+      {
+        question: 'My deadbolt is hard to turn. Can that be fixed?',
+        answer: 'In most cases, yes. A stiff deadbolt is often caused by a misaligned strike plate, worn springs, or debris in the keyway. These are usually inexpensive repairs.',
+      },
+      {
+        question: 'When should I repair vs replace my lock?',
+        answer: 'We assess each situation individually. If your lock is high quality and the damage is minor, repair is usually best. If it is very old, low quality, or heavily damaged, replacement often makes more sense long-term.',
+      },
+    ],
+    keywords: [
+      'lock repair sanford fl',
+      'fix lock sanford florida',
+      'broken lock repair sanford',
+      'lock stuck sanford fl',
+      'door lock repair sanford florida',
+    ],
+    metaTitle: 'Lock Repair Service Sanford FL | Fix Broken & Stuck Locks',
+    metaDescription: 'Professional lock repair in Sanford, FL. Fix sticky, broken, or damaged locks. Same-day service. Honest pricing. Licensed locksmith. Serving all of Seminole County.',
+    featured: false,
+  },
+  {
+    slug: 'lock-installation',
+    title: 'Lock Installation Services',
+    shortTitle: 'Lock Installation',
+    description: 'Professional deadbolt, handle set, and high-security lock installation for homes and businesses in Sanford.',
+    longDescription: `Whether you're upgrading security, replacing old hardware, or installing locks in new construction, Daniel Cerda Locksmith provides expert lock installation throughout Sanford, FL and Seminole County. We work with all leading lock brands and styles to find the perfect security solution for your property.\n\nOur technicians are familiar with the latest lock technologies, including Grade 1 deadbolts, high-security locks, smart locks, and commercial-grade hardware. We provide both the product and the professional installation to ensure everything works perfectly from day one.`,
+    icon: 'ShieldCheck',
+    category: 'residential',
+    price: 'Starting at $75 (labor)',
+    benefits: [
+      'Expert installation of all lock types',
+      'Work with all major brands',
+      'Grade 1, 2, and 3 locks available',
+      'Smart lock installation and programming',
+      'Commercial and residential installs',
+      'ANSI/BHMA standards compliance',
+    ],
+    process: [
+      'Consultation to choose the right lock for your needs',
+      'Precise installation with proper door prep',
+      'Lock function testing and adjustment',
+      'Key cutting and final walkthrough',
+    ],
+    faqs: [
+      {
+        question: 'What is the difference between a Grade 1 and Grade 2 lock?',
+        answer: 'Grade 1 is the highest commercial-grade security rating. Grade 2 is standard residential quality. For exterior doors, we typically recommend Grade 1 deadbolts for maximum security.',
+      },
+      {
+        question: 'Can you install a lock on a door that has never had one?',
+        answer: 'Yes. We can bore the appropriate holes, install the lock, and add a strike plate for any standard or custom door.',
+      },
+      {
+        question: 'Do you sell the locks or do I need to provide them?',
+        answer: 'We carry a selection of quality locks with us, or we can install hardware you have purchased. We recommend consulting with us before purchasing to ensure compatibility.',
+      },
+    ],
+    keywords: [
+      'lock installation sanford fl',
+      'deadbolt installation sanford',
+      'install lock sanford florida',
+      'new lock install sanford fl',
+      'lock replacement sanford florida',
+    ],
+    metaTitle: 'Lock Installation Service Sanford FL | Deadbolt & Security',
+    metaDescription: 'Professional lock installation in Sanford, FL. Deadbolts, smart locks, commercial grade hardware. Expert installation starting at $75 labor. Licensed locksmith. Call today.',
+    featured: false,
+  },
+  {
+    slug: 'key-duplication',
+    title: 'Key Duplication Services',
+    shortTitle: 'Key Duplication',
+    description: 'Fast, accurate key duplication for home, office, and vehicle keys right here in Sanford, FL.',
+    longDescription: `Need a spare key? Daniel Cerda Locksmith provides precision key duplication for virtually any type of key — house keys, office keys, mailbox keys, padlock keys, vehicle keys, and more. Our mobile key cutting equipment allows us to cut accurate duplicates on-site, or you can visit us in Sanford.\n\nHaving spare keys for your home, car, or business is an important safety measure that can save you significant expense and stress in an emergency. We recommend keeping at least one spare with a trusted person.`,
+    icon: 'Copy',
+    category: 'residential',
+    price: 'Starting at $5 per key',
+    benefits: [
+      'Fast on-site key cutting',
+      'House, office, vehicle, and specialty keys',
+      'High-security key duplication available',
+      'Accurate cuts on quality key blanks',
+      'Affordable pricing',
+      'Same-day service',
+    ],
+    process: [
+      'Provide your original key for duplication',
+      'We identify the correct key blank',
+      'Precision cut on professional equipment',
+      'Test and verify before you leave',
+    ],
+    faqs: [
+      {
+        question: 'Can you duplicate a "Do Not Duplicate" key?',
+        answer: 'Some restricted key systems legally restrict duplication to authorized dealers. We follow all applicable laws and manufacturer restrictions.',
+      },
+      {
+        question: 'Can you cut a key from a code without the original?',
+        answer: 'Yes, for many lock types we can cut a key by code from the manufacturer\'s specifications if you can provide proper documentation.',
+      },
+      {
+        question: 'How much does key duplication cost in Sanford?',
+        answer: 'Standard house keys start at around $5. Vehicle and specialty keys vary based on type and complexity.',
+      },
+    ],
+    keywords: [
+      'key duplication sanford fl',
+      'copy key sanford florida',
+      'key copy sanford fl',
+      'spare key sanford',
+      'key cutting sanford florida',
+    ],
+    metaTitle: 'Key Duplication Sanford FL | Copy Keys Fast & Affordable',
+    metaDescription: 'Fast, accurate key duplication in Sanford, FL. House, office, mailbox, and vehicle keys. Starting at $5. Licensed locksmith. Mobile service available. Call today.',
+    featured: false,
+  },
+  {
+    slug: 'car-key-replacement',
+    title: 'Car Key Replacement Services',
+    shortTitle: 'Car Key Replacement',
+    description: 'Lost your car key? We cut and program replacement car keys on-site for all makes and models — less than dealership prices.',
+    longDescription: `Losing your car key doesn't have to mean a trip to the dealership and a massive bill. Daniel Cerda Locksmith provides professional car key replacement services throughout Sanford, FL — coming to your location with all necessary equipment to cut and program a new key on the spot.\n\nWe handle traditional keys, transponder keys, remote key fobs, proximity keys (smart keys), and high-security laser-cut keys. Our automotive key programming equipment is compatible with thousands of vehicle makes and models, and our prices are typically significantly less than what a dealership would charge.`,
+    icon: 'KeySquare',
+    category: 'automotive',
+    price: 'Starting at $75',
+    benefits: [
+      'All vehicle makes and models',
+      'Traditional, transponder, and smart key replacement',
+      'On-site key cutting and programming',
+      'Significantly less than dealership prices',
+      'Proof of ownership required',
+      '24/7 availability',
+    ],
+    process: [
+      'Call with your vehicle year, make, model, and VIN',
+      'We dispatch to your location with the right equipment',
+      'New key cut on professional automotive equipment',
+      'Key programmed to your vehicle on-site',
+    ],
+    faqs: [
+      {
+        question: 'How much does car key replacement cost vs the dealership?',
+        answer: 'Dealerships often charge $200-$400 or more for transponder key programming. We typically charge significantly less for the same or equivalent service.',
+      },
+      {
+        question: 'What information do I need to provide for car key replacement?',
+        answer: 'We\'ll need your vehicle\'s year, make, and model, the VIN (found on your dashboard or registration), and proof of ownership such as title or registration.',
+      },
+      {
+        question: 'Can you replace a key fob?',
+        answer: 'Yes. We can program replacement key fobs for most vehicles. In some cases, we can also repair existing fobs if the battery or buttons have failed.',
+      },
+    ],
+    keywords: [
+      'car key replacement sanford fl',
+      'lost car key sanford florida',
+      'replacement car key sanford',
+      'key fob replacement sanford fl',
+      'transponder key sanford florida',
+    ],
+    metaTitle: 'Car Key Replacement Sanford FL | Keys Cut & Programmed On-Site',
+    metaDescription: 'Lost your car key in Sanford, FL? Daniel Cerda Locksmith replaces all car keys on-site — transponder, smart key, and remote fobs. Less than dealership prices. Call now.',
+    featured: false,
+  },
+  {
+    slug: 'smart-lock-installation',
+    title: 'Smart Lock Installation Services',
+    shortTitle: 'Smart Lock Installation',
+    description: 'Upgrade to a smart lock — professional installation and setup of all major smart lock brands in Sanford, FL.',
+    longDescription: `Smart locks give you keyless convenience, remote access, and activity monitoring for your home or business. Daniel Cerda Locksmith provides professional smart lock installation and configuration throughout Sanford, FL and Seminole County.\n\nWe work with all leading smart lock brands including Schlage Encode, Kwikset Halo, August, Yale Assure, Ultraloq, and more. We handle everything from removing your old hardware to installing and fully configuring your new smart lock — including setting up the app on your phone.`,
+    icon: 'Smartphone',
+    category: 'residential',
+    price: 'Starting at $85 (labor)',
+    benefits: [
+      'All major smart lock brands installed',
+      'Full configuration and app setup',
+      'No keys needed — unlock with phone or code',
+      'Remote access and activity logs',
+      'Compatible with Google Home, Alexa, Apple HomeKit',
+      'Battery backup in case of power loss',
+    ],
+    process: [
+      'Choose your smart lock (or we can recommend one)',
+      'Remove existing hardware and prepare door',
+      'Install smart lock with proper alignment',
+      'Full app setup, code programming, and demo',
+    ],
+    faqs: [
+      {
+        question: 'What is the best smart lock for a Sanford home?',
+        answer: 'Schlage Encode and Kwikset Halo are top choices for reliability and security. For Apple HomeKit users, August and Yale are popular. We can recommend the best fit for your door and needs.',
+      },
+      {
+        question: 'Will a smart lock work if the internet goes down?',
+        answer: 'Yes. Most smart locks operate on the lock itself with a local keypad code and backup physical key, so you\'re never locked out even without internet.',
+      },
+      {
+        question: 'Can smart locks be hacked?',
+        answer: 'Quality smart locks from reputable brands use strong encryption. Keep the firmware updated and use strong access codes — the same security practices you would apply to any connected device.',
+      },
+    ],
+    keywords: [
+      'smart lock installation sanford fl',
+      'smart lock installer sanford florida',
+      'keyless lock installation sanford',
+      'electronic lock installation sanford fl',
+      'schlage encode installation sanford',
+    ],
+    metaTitle: 'Smart Lock Installation Sanford FL | Keyless Entry Setup',
+    metaDescription: 'Professional smart lock installation in Sanford, FL. All major brands. Full app setup and programming. Upgrade to keyless convenience today. Licensed locksmith. Call now.',
+    featured: false,
+  },
+]
+
+export function getServiceBySlug(slug: string): Service | undefined {
+  return services.find((s) => s.slug === slug)
+}
+
+export function getServicesByCategory(category: Service['category']): Service[] {
+  return services.filter((s) => s.category === category)
+}
+
+export function getFeaturedServices(): Service[] {
+  return services.filter((s) => s.featured)
+}
