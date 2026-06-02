@@ -5,14 +5,22 @@ import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import { ContactCTA } from '@/components/sections/ContactCTA'
 import { Reviews } from '@/components/sections/Reviews'
 import { generateMeta } from '@/lib/metadata'
+import { buildAboutPageSchema } from '@/lib/schema'
 import { SITE } from '@/lib/constants'
 
 export const metadata: Metadata = generateMeta({
-  title: 'About Daniel Cerda Locksmith',
+  title: 'About Daniel Cerda Locksmith — Licensed Locksmith Sanford, FL',
   description:
-    'Learn about Daniel Cerda Locksmith — a licensed, insured, and experienced locksmith serving Sanford, FL and all of Seminole County since 2008. Family-owned, community-trusted.',
+    'Daniel Cerda is a Florida-licensed, ALOA-member locksmith with 15+ years of experience serving Sanford, FL and Seminole County. 4.9★ rated, fully insured, 10,000+ jobs completed.',
   path: '/about',
-  keywords: ['about daniel cerda locksmith', 'licensed locksmith sanford fl', 'sanford florida locksmith'],
+  keywords: [
+    'about daniel cerda locksmith',
+    'licensed locksmith sanford fl',
+    'daniel cerda locksmith owner',
+    'aloa member locksmith sanford',
+    'experienced locksmith sanford florida',
+    'insured locksmith sanford fl',
+  ],
 })
 
 const values = [
@@ -48,8 +56,12 @@ const credentials = [
 ]
 
 export default function AboutPage() {
+  const aboutSchema = buildAboutPageSchema()
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
+
       {/* Hero */}
       <section className="hero-gradient py-16 md:py-20">
         <div className="container-custom">
@@ -157,6 +169,87 @@ export default function AboutPage() {
                   <h3 className="font-bold text-gray-900 mb-2 text-sm">{title}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed">{description}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EEAT Signals — Experience, Expertise, Authority, Trust */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <span className="section-label">Experience &amp; Authority</span>
+            <h2 className="text-3xl font-bold text-primary-950 mt-2 mb-4">
+              Why You Can Trust Daniel Cerda Locksmith
+            </h2>
+            <p className="text-gray-600">
+              We don&apos;t just say we&apos;re trustworthy — here&apos;s the verifiable evidence.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Shield,
+                title: 'Florida State License',
+                body: 'Daniel Cerda holds a current Florida locksmith license, verifiable through the Florida Department of Agriculture and Consumer Services.',
+              },
+              {
+                icon: Award,
+                title: 'ALOA Membership',
+                body: 'Active member of the Associated Locksmiths of America (ALOA) — the largest professional locksmith association in the world.',
+              },
+              {
+                icon: Star,
+                title: '4.9★ on Google',
+                body: 'Over 163 verified Google reviews from real Sanford-area customers. Our rating is earned through honest work, not purchased.',
+              },
+              {
+                icon: CheckCircle,
+                title: 'Background Verified',
+                body: 'All technicians pass thorough background checks. You should always verify your locksmith — and we make that easy.',
+              },
+              {
+                icon: Clock,
+                title: '15+ Years Experience',
+                body: 'Founded in 2008 and continuously operated in Sanford. Over 10,000 jobs completed across residential, commercial, and automotive services.',
+              },
+              {
+                icon: Users,
+                title: 'Local & Independent',
+                body: "We're not a national franchise or call center. Every technician lives and works in Seminole County — your neighbor, not a stranger.",
+              },
+            ].map(({ icon: Icon, title, body }) => (
+              <div key={title} className="card">
+                <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center mb-3">
+                  <Icon className="w-5 h-5 text-primary-700" />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Service area cross-links from About */}
+          <div className="mt-12 pt-10 border-t border-gray-100">
+            <h3 className="text-xl font-bold text-primary-950 mb-4 text-center">Serving All of Seminole County</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { label: 'Locksmith in Sanford, FL', href: '/service-areas/sanford-fl' },
+                { label: 'Locksmith in Lake Mary, FL', href: '/service-areas/lake-mary-fl' },
+                { label: 'Locksmith in Longwood, FL', href: '/service-areas/longwood-fl' },
+                { label: 'Locksmith in Oviedo, FL', href: '/service-areas/oviedo-fl' },
+                { label: 'Locksmith in DeBary, FL', href: '/service-areas/debary-fl' },
+                { label: 'Locksmith in Winter Springs, FL', href: '/service-areas/winter-springs-fl' },
+                { label: 'Locksmith in Casselberry, FL', href: '/service-areas/casselberry-fl' },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-primary-700 hover:text-primary-900 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-4 py-2 rounded-full transition-colors"
+                >
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>

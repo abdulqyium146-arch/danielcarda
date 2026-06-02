@@ -109,13 +109,13 @@ export function AreaPageTemplate({ area, slug, lbSchemaJson, breadcrumbSchemaJso
                 {featuredServices.map((service) => (
                   <Link
                     key={service.slug}
-                    href={`/services/${service.slug}`}
+                    href={`/services/${service.slug}/${slug}`}
                     className="flex items-center gap-3 p-4 border border-gray-100 rounded-xl hover:border-primary-200 hover:bg-primary-50 transition-all group"
                   >
                     <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
                     <div className="flex-1 min-w-0">
                       <p className="font-semibold text-gray-900 text-sm group-hover:text-primary-700">
-                        {service.shortTitle}
+                        {service.shortTitle} in {area.city}
                       </p>
                       <p className="text-gray-400 text-xs">{service.price}</p>
                     </div>

@@ -1,12 +1,14 @@
 import Link from 'next/link'
-import { Phone, CheckCircle, Clock, ArrowRight, ChevronRight } from 'lucide-react'
+import { Phone, CheckCircle, Clock, ArrowRight, ChevronRight, MapPin } from 'lucide-react'
 import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import { ContactCTA } from '@/components/sections/ContactCTA'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { Reviews } from '@/components/sections/Reviews'
 import { SITE } from '@/lib/constants'
+import { buildHowToSchema } from '@/lib/schema'
 import type { Service } from '@/data/services'
 import { services } from '@/data/services'
+import { serviceAreas } from '@/data/service-areas'
 
 interface ServicePageTemplateProps {
   service: Service
@@ -19,10 +21,13 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
     .filter((s) => s.slug !== service.slug && s.category === service.category)
     .slice(0, 3)
 
+  const howToSchema = JSON.stringify(buildHowToSchema(service))
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbSchema }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: howToSchema }} />
 
       {/* Hero */}
       <section className="hero-gradient py-16 md:py-20 relative overflow-hidden">
@@ -194,6 +199,32 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
                 </div>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cities We Serve for This Service */}
+      <section className="bg-surface py-12">
+        <div className="container-custom">
+          <h2 className="text-2xl font-bold text-primary-950 mb-2">
+            {service.shortTitle} Available Across Seminole County
+          </h2>
+          <p className="text-gray-500 text-sm mb-6">
+            We provide {service.shortTitle.toLowerCase()} in every city we serve. Click your city for local details and response times.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {serviceAreas.map((area) => (
+              <Link
+                key={area.slug}
+                href={`/services/${service.slug}/${area.slug}`}
+                className="flex items-center gap-2 p-3 bg-white border border-gray-100 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-all group text-sm"
+              >
+                <MapPin className="w-3.5 h-3.5 text-primary-600 flex-shrink-0" />
+                <span className="text-gray-700 group-hover:text-primary-800 font-medium">
+                  {area.city}, FL
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

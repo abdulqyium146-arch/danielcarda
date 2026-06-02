@@ -86,5 +86,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: post.featured ? 0.7 : 0.6,
   }))
 
-  return [...staticPages, ...servicePages, ...areaPages, ...blogPages]
+  const serviceCityPages: MetadataRoute.Sitemap = services.flatMap((service) =>
+    serviceAreas.map((area) => ({
+      url: `${base}/services/${service.slug}/${area.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: area.isPrimary ? 0.85 : 0.75,
+    }))
+  )
+
+  return [...staticPages, ...servicePages, ...areaPages, ...blogPages, ...serviceCityPages]
 }

@@ -160,6 +160,7 @@ export function Footer() {
                 { href: '/contact', label: 'Contact Us' },
                 { href: '/privacy-policy', label: 'Privacy Policy' },
                 { href: '/terms', label: 'Terms of Service' },
+                { href: '/html-sitemap', label: 'Site Map' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -197,6 +198,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms of Service</Link>
+            <Link href="/html-sitemap" className="hover:text-gray-300 transition-colors">Site Map</Link>
             <span>Sanford, FL 32773</span>
           </div>
         </div>
