@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Clock, Facebook, Star } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Facebook, Star, Award, Users, BookOpen } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 const serviceLinks = [
@@ -76,7 +76,7 @@ export function Footer() {
               </div>
             </address>
 
-            {/* Social */}
+            {/* Social / Directory */}
             <div className="flex items-center gap-3 mt-5">
               <a
                 href={SITE.social.facebook}
@@ -95,6 +95,42 @@ export function Footer() {
                 aria-label="Google Business Profile"
               >
                 <Star className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.mapquest.com/us/florida/daniel-cerda-locksmith-543163464"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-primary-900 rounded-lg flex items-center justify-center hover:bg-primary-800 transition-colors"
+                aria-label="MapQuest Listing"
+              >
+                <MapPin className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.bbb.org/us/fl/sanford/profile/locksmith/daniel-cerda-locksmith-and-hardware-0733-90413078"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-primary-900 rounded-lg flex items-center justify-center hover:bg-primary-800 transition-colors"
+                aria-label="BBB Business Profile"
+              >
+                <Award className="w-4 h-4" />
+              </a>
+              <a
+                href="https://nextdoor.com/pages/daniel-cerda-locksmith-sanford-fl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-primary-900 rounded-lg flex items-center justify-center hover:bg-primary-800 transition-colors"
+                aria-label="Nextdoor Business Page"
+              >
+                <Users className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.yellowpages.com/sanford-fl/mip/daniel-cerda-locksmith-and-hardware-506346120"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-primary-900 rounded-lg flex items-center justify-center hover:bg-primary-800 transition-colors"
+                aria-label="Yellow Pages Listing"
+              >
+                <BookOpen className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -199,6 +235,10 @@ export function Footer() {
             <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms of Service</Link>
             <Link href="/html-sitemap" className="hover:text-gray-300 transition-colors">Site Map</Link>
+            <a href="https://www.mapquest.com/us/florida/daniel-cerda-locksmith-543163464" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">MapQuest</a>
+            <a href="https://www.bbb.org/us/fl/sanford/profile/locksmith/daniel-cerda-locksmith-and-hardware-0733-90413078" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">BBB</a>
+            <a href="https://nextdoor.com/pages/daniel-cerda-locksmith-sanford-fl/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Nextdoor</a>
+            <a href="https://www.yellowpages.com/sanford-fl/mip/daniel-cerda-locksmith-and-hardware-506346120" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">Yellow Pages</a>
             <span>Sanford, FL 32773</span>
           </div>
         </div>

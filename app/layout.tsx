@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer'
 import { MobileCTABar } from '@/components/layout/MobileCTABar'
 import { PhoneButton } from '@/components/layout/PhoneButton'
 import { SITE } from '@/lib/constants'
-import { buildLocalBusinessSchema, buildWebsiteSchema, buildOrganizationSchema } from '@/lib/schema'
+import { buildLocalBusinessSchema, buildWebsiteSchema, buildOrganizationSchema, buildEmergencyServiceSchema, buildSpeakableSchema } from '@/lib/schema'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -103,6 +103,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const localBusinessSchema = buildLocalBusinessSchema()
   const websiteSchema = buildWebsiteSchema()
   const organizationSchema = buildOrganizationSchema()
+  const emergencyServiceSchema = buildEmergencyServiceSchema()
+  const speakableSchema = buildSpeakableSchema(SITE.url, ['h1', 'h2', '[data-speakable]'])
 
   return (
     <html lang="en" className={inter.variable}>
@@ -120,6 +122,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyServiceSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
         />
       </head>
       <body className="flex flex-col min-h-screen">

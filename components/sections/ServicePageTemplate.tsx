@@ -4,6 +4,8 @@ import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import { ContactCTA } from '@/components/sections/ContactCTA'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { Reviews } from '@/components/sections/Reviews'
+import { FactBlock } from '@/components/ui/FactBlock'
+import { QuickAnswer } from '@/components/ui/QuickAnswer'
 import { SITE } from '@/lib/constants'
 import { buildHowToSchema } from '@/lib/schema'
 import type { Service } from '@/data/services'
@@ -78,6 +80,20 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Column */}
             <div className="lg:col-span-2">
+              {/* Citation-ready fact panel — parsed by AI crawlers and voice engines */}
+              <FactBlock
+                title={`${service.shortTitle} — Quick Facts`}
+                variant={service.category === 'emergency' ? 'emergency' : 'default'}
+                facts={[
+                  { label: 'Service Type',    value: service.shortTitle },
+                  { label: 'Starting Price',  value: service.price },
+                  ...(service.responseTime ? [{ label: 'Response Time', value: service.responseTime }] : []),
+                  { label: 'Availability',    value: '24/7 — 365 Days a Year' },
+                  { label: 'Coverage Area',   value: '30 miles of Sanford, FL' },
+                  { label: 'License',         value: 'Florida Licensed & Insured' },
+                ]}
+              />
+
               <h2 className="text-3xl font-bold text-primary-950 mb-5">
                 About Our {service.shortTitle} Service
               </h2>
@@ -127,6 +143,33 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
                   </div>
                 </>
               )}
+
+              {/* Citation-ready Q&A snippets — optimized for AI Overviews and LLM extraction */}
+              <div className="mt-10" data-speakable aria-label="Quick answers about this service">
+                <h3 className="text-xl font-bold text-primary-950 mb-4">Quick Answers</h3>
+                <QuickAnswer
+                  question={`What is ${service.shortTitle} and when do I need it?`}
+                  answer={service.description}
+                  icon="❓"
+                />
+                <QuickAnswer
+                  question={`How much does ${service.shortTitle} cost in Sanford, FL?`}
+                  answer={`${service.shortTitle} in Sanford, FL starts at ${service.price}. Daniel Cerda Locksmith always provides an exact quote before beginning any work — no hidden fees, no bait-and-switch pricing. The final cost depends on the specific lock type, vehicle, or situation involved.`}
+                  icon="💰"
+                />
+                {service.responseTime && (
+                  <QuickAnswer
+                    question={`How long does ${service.shortTitle} take in Sanford?`}
+                    answer={`Our average response time for ${service.shortTitle.toLowerCase()} in Sanford is ${service.responseTime}. We have technicians stationed throughout Seminole County to minimize wait time. Once on site, most jobs are completed within 15–45 minutes depending on the complexity.`}
+                    icon="⏱️"
+                  />
+                )}
+                <QuickAnswer
+                  question={`Is Daniel Cerda Locksmith licensed for ${service.shortTitle} in Florida?`}
+                  answer={`Yes. Daniel Cerda is a Florida-licensed locksmith with 15+ years of experience providing ${service.shortTitle.toLowerCase()} throughout Sanford and Seminole County. All technicians are background-checked, fully insured, and trained in the latest methods. License verifiable through the Florida Department of Agriculture and Consumer Services.`}
+                  icon="✅"
+                />
+              </div>
             </div>
 
             {/* Sidebar */}

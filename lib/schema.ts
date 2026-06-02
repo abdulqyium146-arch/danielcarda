@@ -147,7 +147,15 @@ export function buildOrganizationSchema() {
       postalCode: SITE.address.zip,
       addressCountry: 'US',
     },
-    sameAs: [SITE.social.facebook, SITE.social.google, SITE.social.yelp],
+    sameAs: [
+      SITE.social.facebook,
+      SITE.social.google,
+      SITE.social.yelp,
+      'https://www.mapquest.com/us/florida/daniel-cerda-locksmith-543163464',
+      'https://www.bbb.org/us/fl/sanford/profile/locksmith/daniel-cerda-locksmith-and-hardware-0733-90413078',
+      'https://nextdoor.com/pages/daniel-cerda-locksmith-sanford-fl/',
+      'https://www.yellowpages.com/sanford-fl/mip/daniel-cerda-locksmith-and-hardware-506346120',
+    ],
   }
 }
 
@@ -308,5 +316,63 @@ export function buildBlogPostSchema(post: {
     },
     url: `${SITE.url}/blog/${post.slug}`,
     mainEntityOfPage: `${SITE.url}/blog/${post.slug}`,
+  }
+}
+
+// Speakable schema — marks which page sections are suitable for voice/AI extraction
+export function buildSpeakableSchema(pageUrl: string, cssSelectors: string[] = []) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    url: pageUrl,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: cssSelectors.length ? cssSelectors : ['h1', 'h2', '[data-speakable]'],
+    },
+  }
+}
+
+// EmergencyService schema — signals 24/7 emergency availability to AI systems
+export function buildEmergencyServiceSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': ['LocalBusiness', 'Locksmith', 'EmergencyService'],
+    name: SITE.name,
+    description: 'Licensed 24/7 emergency locksmith serving Sanford, FL and Seminole County. Car lockouts, home lockouts, and business lockouts resolved in 20-30 minutes.',
+    telephone: SITE.phone,
+    url: SITE.url,
+    availableLanguage: [{ '@type': 'Language', name: 'English' }],
+    openingHours: 'Mo-Su 00:00-23:59',
+    hasMap: SITE.social.google,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: SITE.address.street,
+      addressLocality: SITE.address.city,
+      addressRegion: SITE.address.state,
+      postalCode: SITE.address.zip,
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: SITE.geo.lat,
+      longitude: SITE.geo.lng,
+    },
+    areaServed: SCHEMA_BASE.areaServed,
+  }
+}
+
+// WebPage schema — generic page wrapper with speakable support
+export function buildWebPageSchema(opts: { url: string; name: string; description: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: opts.name,
+    url: opts.url,
+    description: opts.description,
+    isPartOf: { '@type': 'WebSite', url: SITE.url, name: SITE.name },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '[data-speakable]'],
+    },
   }
 }
