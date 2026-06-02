@@ -33,17 +33,21 @@ const fadeUp = {
 export function Hero() {
   return (
     <section
-      className="relative min-h-[90vh] flex items-center hero-gradient overflow-hidden bg-hero-pattern"
+      className="relative min-h-[90vh] flex items-center hero-gradient overflow-hidden"
       aria-label="Hero section"
     >
       {/* Background depth layers */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Dot pattern overlay (kept as a div so it doesn't conflict with the gradient) */}
+        <div className="absolute inset-0 bg-hero-pattern opacity-40" />
+        {/* Yellow/gold warmth — upper right */}
+        <div className="absolute -top-20 right-0 w-[700px] h-[500px] rounded-full bg-amber-400/20 blur-[140px]" />
+        {/* Yellow accent — lower center-right */}
+        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-yellow-300/15 blur-[120px]" />
         {/* Main electric-blue spotlight — top right */}
         <div className="absolute -top-40 -right-40 w-[800px] h-[800px] rounded-full bg-blue-500/[0.13] blur-[160px]" />
         {/* Secondary glow — mid left, behind content */}
         <div className="absolute top-1/2 -translate-y-1/2 -left-24 w-[550px] h-[550px] rounded-full bg-primary-500/[0.10] blur-[130px]" />
-        {/* Gold warmth accent — bottom right corner */}
-        <div className="absolute -bottom-16 right-1/4 w-72 h-72 rounded-full bg-amber-400/[0.08] blur-[90px]" />
         {/* Bottom fade for wave transition */}
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/30 to-transparent" />
         {/* Subtle diagonal highlight beam */}
