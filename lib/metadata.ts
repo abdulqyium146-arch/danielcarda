@@ -19,7 +19,7 @@ export function generateMeta({
   ogImage,
 }: MetaOptions): Metadata {
   const url = `${SITE.url}${path}`
-  const image = ogImage || `${SITE.url}/og-default.jpg`
+  const image = ogImage || `${SITE.url}/opengraph-image`
 
   return {
     title: {

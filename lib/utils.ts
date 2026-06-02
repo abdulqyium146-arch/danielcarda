@@ -19,7 +19,7 @@ export function slugify(text: string): string {
 }
 
 export function getBaseUrl(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL || 'https://www.danielcerdalocksmith.com'
+  return process.env.NEXT_PUBLIC_SITE_URL || 'https://dcerdalocksmith.com'
 }
 
 export function createCanonicalUrl(path: string): string {

@@ -16,7 +16,7 @@ export function buildLocalBusinessSchema(reviews?: Review[]) {
       width: 300,
       height: 80,
     },
-    image: `${SITE.url}/og-default.jpg`,
+    image: `${SITE.url}/opengraph-image`,
     telephone: SITE.phone,
     email: SITE.email,
     foundingDate: SITE.founded,
