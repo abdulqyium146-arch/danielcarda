@@ -5,6 +5,7 @@ import { Quote } from 'lucide-react'
 import { reviews, aggregateRating } from '@/data/reviews'
 import { StarRating } from '@/components/ui/StarRating'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { SITE } from '@/lib/constants'
 
 export function Reviews() {
   return (
@@ -36,6 +37,17 @@ export function Reviews() {
               itemScope
               itemType="https://schema.org/Review"
             >
+              {/* itemReviewed — required by Google for standalone Review markup */}
+              <div
+                itemProp="itemReviewed"
+                itemScope
+                itemType="https://schema.org/LocalBusiness"
+                className="hidden"
+              >
+                <meta itemProp="name" content={SITE.name} />
+                <meta itemProp="url" content={SITE.url} />
+              </div>
+
               <Quote className="w-8 h-8 text-gold-200 mb-4 flex-shrink-0" />
               <p
                 className="text-gray-700 text-sm leading-relaxed mb-5 italic"
@@ -45,12 +57,26 @@ export function Reviews() {
               </p>
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
                 <div>
-                  <p className="font-bold text-gray-900 text-sm" itemProp="author">
-                    {review.author}
+                  {/* author must be Person, not bare text */}
+                  <p
+                    className="font-bold text-gray-900 text-sm"
+                    itemProp="author"
+                    itemScope
+                    itemType="https://schema.org/Person"
+                  >
+                    <span itemProp="name">{review.author}</span>
                   </p>
                   <p className="text-gray-400 text-xs">{review.location}</p>
                 </div>
-                <div className="text-right">
+                <div
+                  className="text-right"
+                  itemProp="reviewRating"
+                  itemScope
+                  itemType="https://schema.org/Rating"
+                >
+                  <meta itemProp="ratingValue" content={String(review.rating)} />
+                  <meta itemProp="bestRating" content="5" />
+                  <meta itemProp="worstRating" content="1" />
                   <StarRating rating={review.rating} size="sm" className="justify-end" />
                   <p className="text-gray-400 text-xs mt-1">{review.service}</p>
                 </div>
@@ -62,7 +88,7 @@ export function Reviews() {
 
         <div className="text-center mt-10">
           <a
-            href="https://g.page/danielcerdalocksmith"
+            href={SITE.social.google}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary inline-flex items-center gap-2"
