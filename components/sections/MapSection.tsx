@@ -10,7 +10,7 @@ export function MapSection() {
           <div className="order-2 lg:order-1">
             <div className="rounded-3xl overflow-hidden shadow-card-hover border border-gray-100 aspect-video">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.012!2d-81.2681!3d28.8028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s151+Wildwood+Dr%2C+Sanford%2C+FL+32773!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27996.755763205172!2d-81.37380522064478!3d28.701775133036666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e76d5af263520b%3A0x483b91e40fab2bd4!2sDaniel%20Cerda%20Locksmith%20%26%20Hardware!5e0!3m2!1sen!2s!4v1780422420823!5m2!1sen!2s"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '350px' }}
