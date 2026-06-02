@@ -36,10 +36,18 @@ export function Hero() {
       className="relative min-h-[90vh] flex items-center hero-gradient overflow-hidden bg-hero-pattern"
       aria-label="Hero section"
     >
-      {/* Background decorations */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-0 w-96 h-96 bg-primary-700/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl" />
+      {/* Background depth layers */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Main electric-blue spotlight — top right */}
+        <div className="absolute -top-40 -right-40 w-[800px] h-[800px] rounded-full bg-blue-500/[0.13] blur-[160px]" />
+        {/* Secondary glow — mid left, behind content */}
+        <div className="absolute top-1/2 -translate-y-1/2 -left-24 w-[550px] h-[550px] rounded-full bg-primary-500/[0.10] blur-[130px]" />
+        {/* Gold warmth accent — bottom right corner */}
+        <div className="absolute -bottom-16 right-1/4 w-72 h-72 rounded-full bg-amber-400/[0.08] blur-[90px]" />
+        {/* Bottom fade for wave transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/30 to-transparent" />
+        {/* Subtle diagonal highlight beam */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/[0.025] via-transparent to-transparent" />
       </div>
 
       <div className="container-custom relative z-10 py-20">

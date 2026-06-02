@@ -96,7 +96,11 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 60%, #1D4ED8 100%);
+    background:
+      radial-gradient(ellipse 120% 75% at 8% 45%, rgba(37, 99, 235, 0.55) 0%, transparent 62%),
+      radial-gradient(ellipse 75% 110% at 95% 15%, rgba(29, 78, 216, 0.4) 0%, transparent 58%),
+      radial-gradient(ellipse 60% 60% at 50% 100%, rgba(15, 23, 42, 0.6) 0%, transparent 70%),
+      linear-gradient(150deg, #0A1628 0%, #0D2154 28%, #1040A2 58%, #1658CA 80%, #1C66DE 100%);
   }
 
   .emergency-gradient {
