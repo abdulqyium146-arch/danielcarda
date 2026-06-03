@@ -15,18 +15,18 @@ import { homepageFAQs } from '@/data/faqs'
 import { SITE } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Daniel Cerda Locksmith | 24/7 Locksmith Sanford FL — Fast & Trusted',
+  title: 'Locksmith Near Me Sanford FL | Daniel Cerda — 24/7, 20-Min Response',
   description:
-    'Daniel Cerda Locksmith provides 24/7 emergency locksmith services in Sanford, FL and all of Seminole County. Licensed & insured. Car lockouts, rekeying, smart locks, key replacement. Call for 20-minute response.',
+    'Looking for a locksmith near you in Sanford, FL? Daniel Cerda Locksmith is your local licensed 24/7 locksmith — car lockouts, home lockouts, rekeying, car key replacement, smart locks. 20-minute response. Licensed & insured. Call (855) 633-0750.',
   keywords:
-    'locksmith sanford fl, emergency locksmith sanford, 24 hour locksmith sanford florida, car lockout sanford, residential locksmith sanford fl, commercial locksmith sanford',
+    'locksmith near me, locksmith sanford fl, emergency locksmith near me, 24 hour locksmith near me, car locksmith near me, car key replacement near me, locksmith close to me, mobile locksmith near me, residential locksmith near me, commercial locksmith near me, lock repair near me, key duplication near me, local locksmith, auto locksmith near me, locksmith near me open now',
   alternates: {
     canonical: SITE.url,
   },
   openGraph: {
-    title: 'Daniel Cerda Locksmith | 24/7 Locksmith Sanford FL',
+    title: 'Locksmith Near Me Sanford FL | Daniel Cerda — 24/7',
     description:
-      'Licensed & insured locksmith serving Sanford, FL. Emergency lockouts, rekeying, smart locks. 20-30 minute response. Call now.',
+      'Local licensed locksmith in Sanford, FL. Car lockouts, home rekeying, key replacement, smart locks. 20-30 minute response. Call (855) 633-0750.',
     url: SITE.url,
     type: 'website',
   },

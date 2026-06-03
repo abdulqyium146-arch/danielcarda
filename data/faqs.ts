@@ -55,6 +55,36 @@ export const homepageFAQs: FAQ[] = [
     answer: 'Pricing varies by service. Lockouts typically start at $65, rekeying at $25 per lock cylinder, and car key replacement from $75. We always provide a firm quote before starting any work — no surprises on the bill.',
     category: 'general',
   },
+  {
+    question: 'How do I find a locksmith near me in Sanford, FL?',
+    answer: 'Daniel Cerda Locksmith is your closest local licensed locksmith in Sanford. Call (855) 633-0750 and we dispatch a technician to your exact location within 20-30 minutes — no need to search further.',
+    category: 'general',
+  },
+  {
+    question: 'How much does it cost to rekey a lock near me?',
+    answer: 'Lock rekeying in the Sanford area starts at $25 per lock cylinder, plus a service call fee. A typical home with 3 exterior locks runs $100–$150 total — a fraction of the cost of replacing locks.',
+    category: 'residential',
+  },
+  {
+    question: 'How much does car key replacement cost near me?',
+    answer: 'Car key replacement in Sanford, FL starts at $75 for standard transponder keys. Smart keys and proximity fobs range from $100–$200 depending on the vehicle. That is typically 50–60% less than dealership prices.',
+    category: 'automotive',
+  },
+  {
+    question: 'How much does an emergency locksmith cost near me?',
+    answer: 'Emergency lockout service starts at $65–$75 in the Sanford area. We provide a firm price quote before any work begins — the price you hear is the price you pay, with no hidden fees.',
+    category: 'general',
+  },
+  {
+    question: 'Where can I get a key made near me in Sanford?',
+    answer: 'Daniel Cerda Locksmith offers mobile key cutting — we come to your location with professional key cutting equipment. We duplicate house keys, office keys, vehicle keys, and specialty keys starting at $5.',
+    category: 'general',
+  },
+  {
+    question: 'What is the cost to rekey locks when moving into a new home?',
+    answer: 'Rekeying a standard home in Sanford costs $100–$200 for 3–5 locks. This is the smartest first step after moving in — it ensures no previous resident, contractor, or real estate agent still has a working key.',
+    category: 'residential',
+  },
 ]
 
 export const serviceAreaFAQs: FAQ[] = [

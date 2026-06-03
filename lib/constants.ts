@@ -29,6 +29,7 @@ export const SITE = {
   description:
     'Daniel Cerda Locksmith provides professional residential, commercial, automotive, and emergency locksmith services throughout Sanford, FL and surrounding areas. Licensed, insured, and available 24/7.',
   keywords: [
+    // Location-specific
     'locksmith sanford fl',
     'emergency locksmith sanford',
     '24/7 locksmith sanford florida',
@@ -43,6 +44,29 @@ export const SITE = {
     'smart lock installation sanford',
     'key replacement sanford fl',
     'licensed locksmith sanford florida',
+    // Near me — high volume
+    'locksmith near me',
+    'locksmith close to me',
+    'emergency locksmith near me',
+    '24 hour locksmith near me',
+    'car locksmith near me',
+    'car key replacement near me',
+    'mobile locksmith near me',
+    'residential locksmith near me',
+    'commercial locksmith near me',
+    'automotive locksmith near me',
+    'auto locksmith near me',
+    'lock repair near me',
+    'key duplication near me',
+    'locksmith near me open now',
+    'local locksmith near me',
+    'locksmith near sanford fl',
+    // Action/intent
+    'locked out of car near me',
+    'house lockout near me',
+    'rekey locks near me',
+    'smart lock installation near me',
+    'car key made near me',
   ],
   license: 'Florida Licensed & Insured Locksmith',
   founded: '2008',
