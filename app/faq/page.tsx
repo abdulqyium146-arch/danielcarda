@@ -3,7 +3,7 @@ import { FAQSection } from '@/components/sections/FAQSection'
 import { ContactCTA } from '@/components/sections/ContactCTA'
 import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import { buildFAQSchema } from '@/lib/schema'
-import { homepageFAQs, serviceAreaFAQs } from '@/data/faqs'
+import { homepageFAQs, serviceAreaFAQs, eeAtFAQs } from '@/data/faqs'
 import { generateMeta } from '@/lib/metadata'
 import { SITE } from '@/lib/constants'
 
@@ -59,7 +59,7 @@ const additionalFAQs = [
   },
 ]
 
-const allFAQs = [...homepageFAQs, ...additionalFAQs, ...serviceAreaFAQs]
+const allFAQs = [...homepageFAQs, ...additionalFAQs, ...eeAtFAQs, ...serviceAreaFAQs]
 
 export default function FAQPage() {
   const faqSchema = buildFAQSchema(allFAQs)
@@ -170,6 +170,30 @@ export default function FAQPage() {
                       </div>
                     </div>
                   ))}
+              </div>
+            </div>
+
+            {/* Trust & Verification FAQs */}
+            <div className="mb-10">
+              <h2 className="text-2xl font-bold text-primary-950 mb-6">Trust, Licensing & Safety</h2>
+              <div className="space-y-4">
+                {eeAtFAQs.map((faq, i) => (
+                  <div
+                    key={i}
+                    className="bg-white border border-gray-100 rounded-xl p-5 shadow-card"
+                    itemScope
+                    itemType="https://schema.org/Question"
+                  >
+                    <h3 className="font-semibold text-gray-900 mb-2 text-base" itemProp="name">
+                      {faq.question}
+                    </h3>
+                    <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                      <p className="text-gray-600 text-sm leading-relaxed" itemProp="text">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 

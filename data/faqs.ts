@@ -87,6 +87,49 @@ export const homepageFAQs: FAQ[] = [
   },
 ]
 
+export const eeAtFAQs: FAQ[] = [
+  {
+    question: 'Is Daniel Cerda Locksmith a legitimate, licensed business?',
+    answer: 'Yes. Daniel Cerda Locksmith is a Florida state-licensed and fully insured locksmith business, operating continuously since 2008. The license is verifiable through the Florida Department of Agriculture and Consumer Services (DACS). Daniel Cerda is also an active ALOA (Associated Locksmiths of America) member. The business has a 5.0★ Google rating across 14 verified reviews.',
+    category: 'trust',
+  },
+  {
+    question: 'Is it cheaper to rekey or replace locks?',
+    answer: 'Rekeying is significantly cheaper — starting at $25 per lock cylinder vs. $80–$200+ per lock to replace. Security is equivalent when the locks are in good condition. Replace locks only if they are damaged, very old, or you are upgrading to a higher security grade.',
+    category: 'residential',
+  },
+  {
+    question: 'Should I call a locksmith or AAA for a car lockout?',
+    answer: 'A local licensed locksmith is usually faster and less expensive than AAA for car lockouts. Daniel Cerda Locksmith arrives in 20–30 minutes in Sanford with a starting rate of $65. AAA service can take 30–90 minutes depending on availability. A locksmith is also better equipped to handle transponder key issues and can make replacement keys on-site.',
+    category: 'automotive',
+  },
+  {
+    question: 'How do I verify a locksmith\'s license in Florida?',
+    answer: 'Florida requires locksmiths to be licensed through the Department of Agriculture and Consumer Services (DACS). You can verify any locksmith\'s license on the DACS website. Always ask to see the license before allowing any work to begin. Daniel Cerda Locksmith\'s license is current, valid, and available upon request.',
+    category: 'trust',
+  },
+  {
+    question: 'What happens if a locksmith damages my lock or door?',
+    answer: 'A licensed and insured locksmith covers any damage caused during service. Daniel Cerda Locksmith carries comprehensive liability insurance and always attempts non-destructive entry first. In the rare case damage occurs, it is covered. This is a key reason to always use a licensed locksmith rather than an unlicensed technician.',
+    category: 'trust',
+  },
+  {
+    question: 'How do I know if a locksmith is a scam?',
+    answer: 'Warning signs of locksmith scams: extremely low phone quote ($15–$25) that inflates dramatically on arrival; no local address; no license when asked; unmarked vehicle; demanding cash only; no itemized receipt. Legitimate locksmiths have a verifiable license, quote the real price before starting, and accept credit cards. Daniel Cerda Locksmith is FL-licensed, gives upfront pricing, and accepts all major payment methods.',
+    category: 'trust',
+  },
+  {
+    question: 'What is the best smart lock for a Florida home?',
+    answer: 'For Florida homes, the Schlage Encode Plus and Kwikset Halo are top choices — both are weather-resistant, highly rated, and work without a hub. For Apple HomeKit users, the Yale Assure is excellent. For renters or those who want app-free backup, the August Smart Lock Pro installs over your existing deadbolt. Daniel Cerda Locksmith installs and configures all of these brands in Sanford and Seminole County.',
+    category: 'residential',
+  },
+  {
+    question: 'How much does it cost to install a deadbolt in Sanford, FL?',
+    answer: 'Professional deadbolt installation by Daniel Cerda Locksmith starts at $75 for labor. A Grade 1 deadbolt (highest residential security) costs $40–$100 for the hardware plus $75 for installation. Total cost for a quality Grade 1 deadbolt installed professionally: $115–$175. This is significantly more secure than a Grade 2 or Grade 3 lock from a big-box store.',
+    category: 'residential',
+  },
+]
+
 export const serviceAreaFAQs: FAQ[] = [
   {
     question: 'Do you serve all of Seminole County?',
