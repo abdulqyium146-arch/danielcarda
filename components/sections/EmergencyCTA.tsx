@@ -1,4 +1,5 @@
-import { Phone, AlertTriangle, Clock } from 'lucide-react'
+import Link from 'next/link'
+import { Phone, AlertTriangle, Clock, ArrowRight } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export function EmergencyCTA() {
@@ -29,13 +30,22 @@ export function EmergencyCTA() {
             </div>
           </div>
 
-          <a
-            href={SITE.phoneHref}
-            className="flex-shrink-0 flex items-center gap-3 px-8 py-3.5 bg-white text-emergency-700 font-bold text-lg rounded-xl hover:bg-red-50 transition-colors shadow-lg"
-          >
-            <Phone className="w-5 h-5 animate-ring" />
-            {SITE.phone}
-          </a>
+          <div className="flex flex-shrink-0 items-center gap-3">
+            <Link
+              href="/services/emergency-locksmith"
+              className="hidden sm:flex items-center gap-1.5 text-red-100 hover:text-white text-sm font-medium transition-colors"
+            >
+              Learn More
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <a
+              href={SITE.phoneHref}
+              className="flex items-center gap-3 px-8 py-3.5 bg-white text-emergency-700 font-bold text-lg rounded-xl hover:bg-red-50 transition-colors shadow-lg"
+            >
+              <Phone className="w-5 h-5 animate-ring" />
+              {SITE.phone}
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
 import { homepageFAQs } from '@/data/faqs'
 import { SectionHeader } from '@/components/ui/SectionHeader'
@@ -85,9 +86,9 @@ export function FAQSection() {
 
         <div className="text-center mt-10">
           <p className="text-gray-500 text-sm mb-3">Still have questions?</p>
-          <a href="/faq" className="btn-secondary inline-flex items-center gap-2 text-sm">
+          <Link href="/faq" className="btn-secondary inline-flex items-center gap-2 text-sm">
             View All FAQs
-          </a>
+          </Link>
         </div>
       </div>
     </section>

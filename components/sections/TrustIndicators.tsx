@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Award, Clock, Star, Users, ThumbsUp } from 'lucide-react'
+import Link from 'next/link'
+import { Shield, Award, Clock, Star, Users, ThumbsUp, ArrowRight } from 'lucide-react'
 
 const indicators = [
   {
@@ -11,6 +12,7 @@ const indicators = [
     description: 'Florida state licensed locksmith with comprehensive liability coverage.',
     color: 'text-primary-700',
     bg: 'bg-primary-50',
+    href: '/about',
   },
   {
     icon: Clock,
@@ -19,6 +21,7 @@ const indicators = [
     description: 'We arrive faster than any competitor in the Sanford area.',
     color: 'text-gold-600',
     bg: 'bg-gold-50',
+    href: '/services/emergency-locksmith',
   },
   {
     icon: Star,
@@ -27,6 +30,7 @@ const indicators = [
     description: 'Perfect 5-star rating on Google from real Sanford-area customers.',
     color: 'text-gold-500',
     bg: 'bg-gold-50',
+    href: '/about',
   },
   {
     icon: Award,
@@ -35,6 +39,7 @@ const indicators = [
     description: 'Over 15 years serving Sanford and Seminole County families and businesses.',
     color: 'text-primary-700',
     bg: 'bg-primary-50',
+    href: '/about',
   },
   {
     icon: Users,
@@ -43,6 +48,7 @@ const indicators = [
     description: 'Trusted by thousands of homeowners, businesses, and drivers.',
     color: 'text-emerald-600',
     bg: 'bg-emerald-50',
+    href: '/service-areas',
   },
   {
     icon: ThumbsUp,
@@ -51,6 +57,7 @@ const indicators = [
     description: 'We don\'t leave until the job is done right and you\'re satisfied.',
     color: 'text-primary-700',
     bg: 'bg-primary-50',
+    href: '/contact',
   },
 ]
 
@@ -77,7 +84,7 @@ export function TrustIndicators() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {indicators.map((item, i) => {
             const Icon = item.icon
             return (
@@ -90,16 +97,45 @@ export function TrustIndicators() {
                 variants={cardVariants}
                 className="card group hover:border-primary-200 transition-all duration-300"
               >
-                <div className={`w-12 h-12 ${item.bg} rounded-xl flex items-center justify-center mb-4`}>
-                  <Icon className={`w-6 h-6 ${item.color}`} />
-                </div>
-                <div className={`text-2xl font-bold ${item.color} mb-0.5`}>{item.value}</div>
-                <div className="text-base font-semibold text-gray-800 mb-2">{item.label}</div>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                <Link href={item.href} className="block">
+                  <div className={`w-12 h-12 ${item.bg} rounded-xl flex items-center justify-center mb-4`}>
+                    <Icon className={`w-6 h-6 ${item.color}`} />
+                  </div>
+                  <div className={`text-2xl font-bold ${item.color} mb-0.5`}>{item.value}</div>
+                  <div className="text-base font-semibold text-gray-800 mb-2 group-hover:text-primary-700 transition-colors">
+                    {item.label}
+                  </div>
+                  <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                </Link>
               </motion.div>
             )
           })}
         </div>
+
+        {/* Quick nav to key pages */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap items-center justify-center gap-3"
+        >
+          {[
+            { label: 'About Daniel Cerda', href: '/about' },
+            { label: 'All Services', href: '/services' },
+            { label: 'Service Areas', href: '/service-areas' },
+            { label: 'Read Our FAQs', href: '/faq' },
+            { label: 'Contact Us', href: '/contact' },
+          ].map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-primary-400 hover:text-primary-700 transition-colors"
+            >
+              {link.label}
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

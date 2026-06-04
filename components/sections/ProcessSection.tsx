@@ -1,7 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Phone, MapPin, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+import { Phone, MapPin, CheckCircle, ArrowRight } from 'lucide-react'
+import { SITE } from '@/lib/constants'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 
 const steps = [
@@ -72,6 +74,54 @@ export function ProcessSection() {
             )
           })}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href={SITE.phoneHref}
+            className="btn-primary inline-flex items-center gap-2 px-8 py-3.5 text-base"
+          >
+            <Phone className="w-4 h-4" />
+            Call Now — {SITE.phone}
+          </a>
+          <Link
+            href="/contact"
+            className="btn-secondary inline-flex items-center gap-2 px-8 py-3.5 text-base"
+          >
+            Request a Free Quote
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
+
+        {/* Service quick-links */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-gray-500"
+        >
+          <span className="font-medium text-gray-400">Common requests:</span>
+          {[
+            { label: 'Car Lockout', href: '/services/car-lockout' },
+            { label: 'House Lockout', href: '/services/house-lockout' },
+            { label: 'Lock Rekeying', href: '/services/rekeying' },
+            { label: 'Car Key Replacement', href: '/services/car-key-replacement' },
+            { label: 'Emergency Locksmith', href: '/services/emergency-locksmith' },
+          ].map((s) => (
+            <Link
+              key={s.href}
+              href={s.href}
+              className="hover:text-primary-700 hover:underline transition-colors"
+            >
+              {s.label}
+            </Link>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

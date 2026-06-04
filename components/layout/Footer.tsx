@@ -10,10 +10,13 @@ const serviceLinks = [
   { href: '/services/automotive-locksmith', label: 'Automotive Locksmith' },
   { href: '/services/car-lockout', label: 'Car Lockout' },
   { href: '/services/house-lockout', label: 'House Lockout' },
+  { href: '/services/business-lockout', label: 'Business Lockout' },
   { href: '/services/rekeying', label: 'Lock Rekeying' },
-  { href: '/services/smart-lock-installation', label: 'Smart Locks' },
-  { href: '/services/car-key-replacement', label: 'Car Key Replacement' },
+  { href: '/services/lock-repair', label: 'Lock Repair' },
   { href: '/services/lock-installation', label: 'Lock Installation' },
+  { href: '/services/key-duplication', label: 'Key Duplication' },
+  { href: '/services/car-key-replacement', label: 'Car Key Replacement' },
+  { href: '/services/smart-lock-installation', label: 'Smart Locks' },
 ]
 
 const areaLinks = [

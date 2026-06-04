@@ -23,6 +23,11 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
     .filter((s) => s.slug !== service.slug && s.category === service.category)
     .slice(0, 3)
 
+  // Cross-category suggestions — show 3 from other categories
+  const crossServices = services
+    .filter((s) => s.slug !== service.slug && s.category !== service.category && s.featured)
+    .slice(0, 3)
+
   const howToSchema = JSON.stringify(buildHowToSchema(service))
 
   return (
@@ -238,6 +243,25 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
                     >
                       All Services <ArrowRight className="w-3 h-3" />
                     </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* Cross-category services */}
+              {crossServices.length > 0 && (
+                <div className="card">
+                  <h4 className="font-bold text-gray-900 mb-3 text-sm">You May Also Need</h4>
+                  <div className="space-y-2">
+                    {crossServices.map((s) => (
+                      <Link
+                        key={s.slug}
+                        href={`/services/${s.slug}`}
+                        className="flex items-center justify-between py-2 text-sm text-gray-700 hover:text-primary-700 border-b border-gray-50 last:border-0 transition-colors"
+                      >
+                        {s.shortTitle}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    ))}
                   </div>
                 </div>
               )}
