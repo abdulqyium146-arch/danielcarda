@@ -10,8 +10,9 @@ import { Reviews } from '@/components/sections/Reviews'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { ContactCTA } from '@/components/sections/ContactCTA'
 import { MapSection } from '@/components/sections/MapSection'
-import { buildFAQSchema } from '@/lib/schema'
+import { buildFAQSchema, buildLocalBusinessSchema } from '@/lib/schema'
 import { homepageFAQs } from '@/data/faqs'
+import { reviews } from '@/data/reviews'
 import { SITE } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -34,9 +35,16 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const faqSchema = buildFAQSchema(homepageFAQs)
+  // Pass real reviews so the JSON-LD includes aggregateRating + review array.
+  // Nested reviews don't require itemReviewed — Google validates them correctly.
+  const localBusinessSchema = buildLocalBusinessSchema(reviews.slice(0, 3))
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -22,15 +22,13 @@ export function buildLocalBusinessSchema(reviews?: Review[]) {
     email: SITE.email,
     foundingDate: SITE.founded,
     numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 10 },
-    aggregateRating: reviews
-      ? {
-          '@type': 'AggregateRating',
-          ratingValue: 5.0,
-          reviewCount: 14,
-          bestRating: 5,
-          worstRating: 1,
-        }
-      : undefined,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: SITE.rating,
+      reviewCount: Number(SITE.reviewCount),
+      bestRating: 5,
+      worstRating: 1,
+    },
     review: reviews?.slice(0, 3).map((r) => ({
       '@type': 'Review',
       author: { '@type': 'Person', name: r.author },
