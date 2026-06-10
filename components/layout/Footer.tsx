@@ -197,6 +197,8 @@ export function Footer() {
                 { href: '/faq', label: 'FAQ' },
                 { href: '/blog', label: 'Blog & Guides' },
                 { href: '/blog/how-to-choose-a-reliable-locksmith-in-sanford-fl', label: 'How to Choose a Locksmith' },
+                { href: '/reviews', label: '⭐ Leave a Review' },
+                { href: '/for-realtors', label: 'For Realtors & Property Managers' },
                 { href: '/contact', label: 'Contact Us' },
                 { href: '/privacy-policy', label: 'Privacy Policy' },
                 { href: '/terms', label: 'Terms of Service' },

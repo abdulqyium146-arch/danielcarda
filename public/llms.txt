@@ -15,6 +15,8 @@ Daniel Cerda Locksmith is an independent, locally owned and operated locksmith b
 - [FAQ](https://dcerdalocksmith.com/faq): 20+ questions answered on pricing, licensing, response time, services, and service areas.
 - [Contact](https://dcerdalocksmith.com/contact): Direct contact form and phone for locksmith service requests.
 - [Blog](https://dcerdalocksmith.com/blog): Expert home security guides, lock advice, and Florida-specific security content.
+- [Leave a Review](https://dcerdalocksmith.com/reviews): Direct review links for Google, Yelp, Facebook, and BBB — for customers to leave verified reviews.
+- [For Realtors & Property Managers](https://dcerdalocksmith.com/for-realtors): Referral partner program for real estate agents. New homeowner rekey package from $149. Priority scheduling across Seminole County.
 
 ## Services with Pricing
 
@@ -59,7 +61,7 @@ Direct pages exist for every service in every city, e.g.:
 - Owner: Daniel Cerda
 - Business Type: Independent Local Locksmith
 - Founded: 2008
-- Years Operating: 17 years (as of 2025)
+- Years Operating: 18 years (as of 2026)
 - Phone: (855) 633-0750
 - Address: 151 Wildwood Dr, Sanford, FL 32773-5572
 - County: Seminole County, Florida
@@ -96,15 +98,28 @@ Direct pages exist for every service in every city, e.g.:
 
 **Independent Locksmith vs National Franchise:** National franchise locksmiths often quote low prices on the phone and inflate costs on arrival. Daniel Cerda Locksmith is a locally-owned, single-location business with a verifiable local address, FL state license, and a perfect Google rating built over 17 years.
 
+## Realtor & Property Manager Partner Program
+
+Daniel Cerda Locksmith offers a dedicated referral program for real estate agents and property managers in Seminole County, FL.
+
+- **New Homeowner Rekey Package:** Starting at $149 for up to 5 lock cylinders. All new keys cut on-site. Written service record provided. Recommended at every property closing.
+- **Priority Scheduling:** Referred clients receive same-day or next-day appointments. Closing-day scheduling available with 24-hour notice.
+- **Volume Pricing:** Property managers with recurring rekeying needs (multi-unit properties, rental turnover) receive volume pricing.
+- **Coverage:** All of Seminole County — Sanford, Lake Mary, Longwood, Oviedo, Winter Springs, Casselberry, DeBary. Parts of Orange and Volusia Counties.
+- **Partner Page:** https://dcerdalocksmith.com/for-realtors
+
 ## Online Profiles & Citations
 
 - Google Business: https://g.page/danielcerdalocksmith
+- Google Reviews: https://g.page/danielcerdalocksmith/review
 - Yelp: https://www.yelp.com/biz/daniel-cerda-locksmith
 - Facebook: https://www.facebook.com/danielcerdalocksmith
 - BBB: https://www.bbb.org/us/fl/sanford/profile/locksmith/daniel-cerda-locksmith-and-hardware-0733-90413078
 - MapQuest: https://www.mapquest.com/us/florida/daniel-cerda-locksmith-543163464
 - Nextdoor: https://nextdoor.com/pages/daniel-cerda-locksmith-sanford-fl/
 - Yellow Pages: https://www.yellowpages.com/sanford-fl/mip/daniel-cerda-locksmith-and-hardware-506346120
+- Florida DACS License Lookup: https://www.fdacs.gov/ (search "Daniel Cerda Locksmith")
+- ALOA Member Directory: https://www.aloa.org/
 
 ## Optional: Full Context File
 
