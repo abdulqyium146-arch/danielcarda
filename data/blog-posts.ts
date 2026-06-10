@@ -7,6 +7,7 @@ export interface BlogPost {
   author: string
   category: string
   tags: string[]
+  relatedServiceSlugs?: string[]
   metaTitle: string
   metaDescription: string
   readTime: string
@@ -63,14 +64,15 @@ Smart deadbolts add keyless convenience and activity monitoring. Top picks:
 
 Even the best deadbolt can be compromised by poor installation. A deadbolt that's misaligned with the strike plate, installed on a weak door frame, or set too loosely can fail under attack.
 
-Daniel Cerda Locksmith provides professional lock installation throughout Sanford and Seminole County. We ensure proper alignment, use reinforced strike plates, and test every installation thoroughly.
+Daniel Cerda Locksmith provides [professional lock installation](/services/lock-installation) throughout [Sanford, FL](/service-areas/sanford-fl) and Seminole County. We ensure proper alignment, use reinforced strike plates, and test every installation thoroughly.
 
-**Ready to upgrade? Call us at (855) 633-0750 for a free security assessment.**
+**Ready to upgrade?** Book a [lock installation](/services/lock-installation) or call us at (855) 633-0750 for a free security assessment.
     `,
     date: '2024-10-15',
     author: 'Daniel Cerda',
     category: 'Home Security',
     tags: ['deadbolt', 'home security', 'lock installation', 'sanford fl', 'lock grades'],
+    relatedServiceSlugs: ['lock-installation', 'smart-lock-installation', 'residential-locksmith'],
     metaTitle: 'How to Choose the Right Deadbolt for Your Home | Sanford FL Locksmith Tips',
     metaDescription: 'Not all deadbolts are equal. Learn which deadbolt grades, features, and brands Sanford FL homeowners should choose for maximum security. Expert advice from Daniel Cerda Locksmith.',
     readTime: '5 min read',
@@ -95,7 +97,7 @@ Call a family member or trusted friend who might have your spare key. Many peopl
 
 ## Step 3: Call a Licensed Locksmith
 
-For most car lockouts in Sanford, FL, the fastest solution is calling a licensed automotive locksmith. An experienced locksmith like Daniel Cerda Locksmith can typically arrive within 20-30 minutes and unlock your vehicle in minutes using professional tools.
+For most car lockouts in [Sanford, FL](/service-areas/sanford-fl), the fastest solution is calling a [licensed automotive locksmith](/services/car-lockout). An experienced locksmith like Daniel Cerda Locksmith can typically arrive within 20-30 minutes and unlock your vehicle in minutes using professional tools.
 
 **Why a locksmith is often better than roadside assistance:**
 - Faster response (no insurance hold time)
@@ -117,12 +119,13 @@ If a child or pet is locked in a hot car, **call 911 immediately**. Florida temp
 
 Professional car lockout service from Daniel Cerda Locksmith starts at $65. We provide a firm quote over the phone before dispatching. There are no hidden fees.
 
-**Need help right now? Call (855) 633-0750 — we're available 24/7.**
+**Need help right now?** Request [car lockout service](/services/car-lockout) or [car key replacement](/services/car-key-replacement) — call (855) 633-0750, available 24/7.
     `,
     date: '2024-09-22',
     author: 'Daniel Cerda',
     category: 'Automotive',
     tags: ['car lockout', 'auto locksmith', 'sanford fl', 'florida locksmith tips', 'locked out of car'],
+    relatedServiceSlugs: ['car-lockout', 'automotive-locksmith', 'car-key-replacement'],
     metaTitle: 'Locked Out of Your Car in Florida? Here\'s What to Do | Sanford Locksmith',
     metaDescription: 'What to do when you\'re locked out of your car in Sanford or Central Florida. Safety tips, what NOT to do, and how to get fast locksmith help. Daniel Cerda Locksmith.',
     readTime: '4 min read',
@@ -180,14 +183,15 @@ Absolutely. Some homeowners rekey the locks they want to keep and replace the on
 
 ## When to Call a Professional
 
-While rekeying kits exist for DIY use, improper rekeying can leave your lock partially functional or damage the cylinder — potentially requiring an expensive replacement anyway. Professional rekeying from Daniel Cerda Locksmith costs little more than a DIY kit and comes with the guarantee that the job is done right.
+While rekeying kits exist for DIY use, improper rekeying can leave your lock partially functional or damage the cylinder — potentially requiring an expensive replacement anyway. [Professional rekeying](/services/rekeying) from Daniel Cerda Locksmith costs little more than a DIY kit and comes with the guarantee that the job is done right.
 
-**Call (855) 633-0750 to schedule your rekeying or lock replacement in Sanford, FL.**
+Schedule your [rekeying](/services/rekeying) or [lock installation](/services/lock-installation) in [Sanford, FL](/service-areas/sanford-fl) — call (855) 633-0750.
     `,
     date: '2024-08-10',
     author: 'Daniel Cerda',
     category: 'Home Security',
     tags: ['rekeying', 'lock replacement', 'home security', 'sanford fl', 'locksmith tips'],
+    relatedServiceSlugs: ['rekeying', 'lock-installation', 'lock-repair'],
     metaTitle: 'Rekeying vs Replacing Locks: Which Should You Choose? | Sanford FL',
     metaDescription: 'Should you rekey or replace your locks? A licensed Sanford FL locksmith breaks down the cost, security, and situations where each option makes the most sense.',
     readTime: '5 min read',
@@ -254,14 +258,15 @@ Florida's climate presents unique considerations for smart locks:
 
 Smart lock installation requires precise alignment, proper door prep, and configuration. A poorly installed smart lock that doesn't engage the strike plate fully can be forced open. Our technicians ensure every installation is physically and electronically secure.
 
-Daniel Cerda Locksmith installs all major smart lock brands throughout Sanford and Seminole County. We handle the full setup — including app configuration, code programming, and showing you how to use all the features.
+Daniel Cerda Locksmith handles [smart lock installation](/services/smart-lock-installation) for all major brands throughout [Sanford](/service-areas/sanford-fl) and Seminole County. We handle the full setup — including app configuration, code programming, and showing you how to use all the features.
 
-**Call (855) 633-0750 to schedule your smart lock installation.**
+**Schedule your [smart lock installation](/services/smart-lock-installation)** or call (855) 633-0750 to discuss options.
     `,
     date: '2024-07-05',
     author: 'Daniel Cerda',
     category: 'Smart Home',
     tags: ['smart lock', 'smart home', 'home security', 'sanford fl', 'keyless entry'],
+    relatedServiceSlugs: ['smart-lock-installation', 'lock-installation', 'residential-locksmith'],
     metaTitle: 'Best Smart Locks for Florida Homeowners 2024 | Sanford Locksmith Guide',
     metaDescription: 'Which smart lock is right for your Florida home? A Sanford FL locksmith compares top smart lock brands, features, and what to consider before installing. Expert guide.',
     readTime: '6 min read',
@@ -293,10 +298,10 @@ A locksmith is a licensed security professional trained in the installation, rep
 
 ### Core Locksmith Service Categories
 
-- **Residential locksmith services** — lock installation, rekeying, deadbolt upgrades, smart lock setup, and lockout entry
-- **Commercial locksmith services** — master key systems, electronic access control, panic hardware, and high-security cylinders
-- **Automotive locksmith services** — car lockouts, transponder key programming, key fob replacement, and ignition cylinder repair
-- **Emergency locksmith services** — 24/7 response for lockouts, break-in damage repair, and urgent rekeying
+- **[Residential Locksmith](/services/residential-locksmith)** — lock installation, rekeying, deadbolt upgrades, smart lock setup, and lockout entry
+- **[Commercial Locksmith](/services/commercial-locksmith)** — master key systems, electronic access control, panic hardware, and high-security cylinders
+- **[Automotive Locksmith](/services/automotive-locksmith)** — car lockouts, transponder key programming, key fob replacement, and ignition cylinder repair
+- **[Emergency Locksmith](/services/emergency-locksmith)** — 24/7 response for lockouts, break-in damage repair, and urgent rekeying
 
 The scope of work a locksmith handles varies significantly by training and equipment. When hiring, confirm the provider specializes in the specific service category you need.
 
@@ -351,7 +356,7 @@ Home security in Florida carries unique considerations. The state's high rate of
 
 ### Rekeying vs. Replacing Locks
 
-Rekeying changes the internal pin configuration of your existing lock cylinder, rendering all previously cut keys useless. A typical three-lock home rekey in the Sanford area runs $100–$175.
+[Rekeying](/services/rekeying) changes the internal pin configuration of your existing lock cylinder, rendering all previously cut keys useless. A typical three-lock home rekey in the [Sanford area](/service-areas/sanford-fl) runs $100–$175.
 
 **Rekey when:**
 - You just moved into a new home
@@ -369,7 +374,7 @@ Deadbolt standards matter. Big-box store locks are often Grade 2 or Grade 3 — 
 
 ### Smart Lock Installation in Sanford
 
-Smart locks are increasingly popular in Central Florida, especially in vacation rental properties on Airbnb and Vrbo. Wi-Fi-enabled locks such as the Schlage Encode Plus, Kwikset Halo, and Yale Assure support remote access management, time-limited guest codes, and access logs.
+[Smart locks](/services/smart-lock-installation) are increasingly popular in Central Florida, especially in vacation rental properties on Airbnb and Vrbo. Wi-Fi-enabled locks such as the Schlage Encode Plus, Kwikset Halo, and Yale Assure support remote access management, time-limited guest codes, and access logs.
 
 **Cost of smart lock installation:**
 - Labor: $75–$125 for standard door prep and installation
@@ -409,11 +414,11 @@ Vehicle lockouts are among the most frequent emergency calls in Seminole County.
 
 ### Locksmith vs. Dealership Pricing
 
-Mobile locksmiths typically cost 40–60% less than a dealership for key replacement services. A standard transponder key costs $150–$300 at a dealer versus $75–$125 through a licensed mobile locksmith. Smart keys and fobs run $250–$500 at dealers versus $100–$200 through a locksmith. For a car lockout, a mobile locksmith arrives faster and charges less than dealership roadside programs.
+Mobile locksmiths typically cost 40–60% less than a dealership for [car key replacement](/services/car-key-replacement) services. A standard transponder key costs $150–$300 at a dealer versus $75–$125 through a licensed mobile locksmith. Smart keys and fobs run $250–$500 at dealers versus $100–$200 through a locksmith. For a car lockout, a mobile locksmith arrives faster and charges less than dealership roadside programs.
 
 For lost car key replacement, the locksmith needs your vehicle identification number (VIN) and proof of ownership. Always confirm the technician carries the correct OBD-II programming equipment for your specific make and model before they dispatch.
 
-Daniel Cerda Locksmith provides on-site automotive locksmith service throughout Sanford and all of Seminole County — with transparent pricing, a 20–30 minute average response time, and no hidden fees.
+Daniel Cerda Locksmith provides on-site [automotive locksmith service](/services/automotive-locksmith) throughout [Sanford](/service-areas/sanford-fl) and all of Seminole County — with transparent pricing, a 20–30 minute average response time, and no hidden fees.
 
 ## Smart Locks and the Future of Property Security
 
@@ -453,6 +458,7 @@ The key signals of a trustworthy provider are consistent across every service ty
     date: '2026-06-09',
     author: 'Daniel Cerda',
     category: 'Security Guide',
+    relatedServiceSlugs: ['emergency-locksmith', 'residential-locksmith', 'automotive-locksmith', 'commercial-locksmith', 'rekeying', 'smart-lock-installation'],
     tags: [
       'locksmith sanford fl',
       'how to choose a locksmith',

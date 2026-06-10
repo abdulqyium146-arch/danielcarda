@@ -11,6 +11,7 @@ import { buildHowToSchema } from '@/lib/schema'
 import type { Service } from '@/data/services'
 import { services } from '@/data/services'
 import { serviceAreas } from '@/data/service-areas'
+import { blogPosts } from '@/data/blog-posts'
 
 interface ServicePageTemplateProps {
   service: Service
@@ -23,9 +24,12 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
     .filter((s) => s.slug !== service.slug && s.category === service.category)
     .slice(0, 3)
 
-  // Cross-category suggestions — show 3 from other categories
   const crossServices = services
     .filter((s) => s.slug !== service.slug && s.category !== service.category && s.featured)
+    .slice(0, 3)
+
+  const relatedBlogPosts = blogPosts
+    .filter((p) => p.relatedServiceSlugs?.includes(service.slug))
     .slice(0, 3)
 
   const howToSchema = JSON.stringify(buildHowToSchema(service))
@@ -262,6 +266,33 @@ export function ServicePageTemplate({ service, schemaJson, breadcrumbSchema }: S
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {/* From Our Blog */}
+              {relatedBlogPosts.length > 0 && (
+                <div className="card">
+                  <h4 className="font-bold text-gray-900 mb-3 text-sm">From Our Blog</h4>
+                  <div className="space-y-3">
+                    {relatedBlogPosts.map((post) => (
+                      <Link
+                        key={post.slug}
+                        href={`/blog/${post.slug}`}
+                        className="block group"
+                      >
+                        <p className="text-sm font-medium text-gray-800 group-hover:text-primary-700 transition-colors leading-snug mb-0.5">
+                          {post.title}
+                        </p>
+                        <p className="text-xs text-gray-400">{post.readTime}</p>
+                      </Link>
+                    ))}
+                    <Link
+                      href="/blog"
+                      className="flex items-center gap-1 text-xs text-primary-600 font-semibold hover:text-primary-800 pt-1"
+                    >
+                      All Guides <ArrowRight className="w-3 h-3" />
+                    </Link>
                   </div>
                 </div>
               )}

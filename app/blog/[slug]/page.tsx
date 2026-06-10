@@ -1,13 +1,64 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, User, ArrowLeft, Clock, Phone } from 'lucide-react'
+import { Calendar, User, ArrowLeft, ArrowRight, Clock, Phone } from 'lucide-react'
 import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import { ContactCTA } from '@/components/sections/ContactCTA'
 import { blogPosts, getPostBySlug } from '@/data/blog-posts'
+import { services } from '@/data/services'
 import { buildBlogPostSchema } from '@/lib/schema'
 import { generateMeta } from '@/lib/metadata'
 import { SITE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
+import type { ReactNode } from 'react'
+
+// Parses inline markdown: [text](url) links and **bold** text
+function parseInline(text: string, lineIdx: number): ReactNode {
+  const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g
+  const nodes: ReactNode[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) nodes.push(text.slice(lastIndex, match.index))
+
+    if (match[1] !== undefined) {
+      const isExternal = match[2].startsWith('http')
+      nodes.push(
+        isExternal ? (
+          <a
+            key={`${lineIdx}-lnk-${match.index}`}
+            href={match[2]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-700 font-semibold hover:text-primary-900"
+          >
+            {match[1]}
+          </a>
+        ) : (
+          <Link
+            key={`${lineIdx}-lnk-${match.index}`}
+            href={match[2]}
+            className="text-primary-700 font-semibold hover:text-primary-900"
+          >
+            {match[1]}
+          </Link>
+        )
+      )
+    } else {
+      nodes.push(
+        <strong key={`${lineIdx}-b-${match.index}`} className="text-gray-900">
+          {match[3]}
+        </strong>
+      )
+    }
+    lastIndex = match.index + match[0].length
+  }
+
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex))
+  if (nodes.length === 0) return text
+  if (nodes.length === 1) return nodes[0]
+  return nodes
+}
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }))
@@ -40,6 +91,10 @@ export default async function BlogPostPage({
 
   const schema = buildBlogPostSchema(post)
   const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3)
+
+  const relatedServices = (post.relatedServiceSlugs ?? [])
+    .map((s) => services.find((svc) => svc.slug === s))
+    .filter(Boolean) as typeof services
 
   return (
     <>
@@ -105,38 +160,33 @@ export default async function BlogPostPage({
                   if (line.startsWith('### ')) {
                     return <h3 key={i} className="text-xl font-bold text-primary-950 mb-2 mt-6">{line.slice(4)}</h3>
                   }
+                  if (line.startsWith('| ') && line.includes(' | ')) {
+                    if (line.match(/^\|[-| ]+\|$/)) return null
+                    const cells = line.split('|').filter((c) => c.trim())
+                    return (
+                      <div key={i} className="contents">
+                        {i === line.indexOf('| ') ? null : null}
+                      </div>
+                    )
+                  }
                   if (line.startsWith('- **')) {
                     const match = line.match(/^- \*\*(.*?)\*\*:?\s*(.*)/)
                     if (match) {
                       return (
                         <li key={i} className="text-gray-700 mb-2 ml-4 list-disc">
-                          <strong className="text-gray-900">{match[1]}</strong>
-                          {match[2] ? `: ${match[2]}` : ''}
+                          <strong className="text-gray-900">{parseInline(match[1], i)}</strong>
+                          {match[2] ? <>{': '}{parseInline(match[2], i)}</> : ''}
                         </li>
                       )
                     }
                   }
                   if (line.startsWith('- ') || line.startsWith('* ')) {
-                    return <li key={i} className="text-gray-700 mb-1.5 ml-4 list-disc">{line.slice(2)}</li>
-                  }
-                  if (line.startsWith('**') && line.endsWith('**')) {
-                    return <p key={i} className="font-bold text-gray-900 mb-2">{line.slice(2, -2)}</p>
+                    return <li key={i} className="text-gray-700 mb-1.5 ml-4 list-disc">{parseInline(line.slice(2), i)}</li>
                   }
                   if (line.trim() === '') {
                     return <br key={i} />
                   }
-                  // Handle inline bold
-                  const parts = line.split(/\*\*(.*?)\*\*/g)
-                  if (parts.length > 1) {
-                    return (
-                      <p key={i} className="text-gray-700 leading-relaxed mb-3">
-                        {parts.map((part, j) =>
-                          j % 2 === 0 ? part : <strong key={j} className="text-gray-900">{part}</strong>
-                        )}
-                      </p>
-                    )
-                  }
-                  return <p key={i} className="text-gray-700 leading-relaxed mb-3">{line}</p>
+                  return <p key={i} className="text-gray-700 leading-relaxed mb-3">{parseInline(line, i)}</p>
                 })}
               </div>
 
@@ -174,6 +224,31 @@ export default async function BlogPostPage({
                 </Link>
               </div>
 
+              {/* Related Services */}
+              {relatedServices.length > 0 && (
+                <div className="card">
+                  <h4 className="font-bold text-gray-900 mb-3 text-sm">Related Services</h4>
+                  <div className="space-y-2">
+                    {relatedServices.map((svc) => (
+                      <Link
+                        key={svc.slug}
+                        href={`/services/${svc.slug}`}
+                        className="flex items-center justify-between py-2 text-sm text-gray-700 hover:text-primary-700 border-b border-gray-50 last:border-0 transition-colors"
+                      >
+                        {svc.shortTitle}
+                        <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
+                      </Link>
+                    ))}
+                    <Link
+                      href="/services"
+                      className="flex items-center gap-1 text-xs text-primary-600 font-semibold hover:text-primary-800 pt-1"
+                    >
+                      All Services <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
               {/* Tags */}
               <div className="card">
                 <h4 className="font-bold text-gray-900 mb-3 text-sm">Tags</h4>
@@ -189,7 +264,7 @@ export default async function BlogPostPage({
                 </div>
               </div>
 
-              {/* Related */}
+              {/* Related Posts */}
               {relatedPosts.length > 0 && (
                 <div className="card">
                   <h4 className="font-bold text-gray-900 mb-3 text-sm">Related Articles</h4>
