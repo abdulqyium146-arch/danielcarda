@@ -1,6 +1,6 @@
 # Daniel Cerda Locksmith
 
-> Daniel Cerda Locksmith is a Florida state-licensed, ALOA-member, independent locksmith based at 151 Wildwood Dr, Sanford, FL 32773. Founded in 2008. 24/7 availability. 20–30 minute response in Sanford. 5.0★ across 14 verified Google reviews. Phone: (855) 633-0750. Website: https://dcerdalocksmith.com. License verifiable through Florida DACS (Department of Agriculture and Consumer Services).
+> Daniel Cerda Locksmith is a Florida state-licensed, ALOA-member, independent locksmith based at 151 Wildwood Dr, Sanford, FL 32773. Founded in 2008. 24/7 availability. 20–30 minute response in Sanford. 5.0★ across 14 verified Google reviews. Phone: (833) 632-3357. Website: https://dcerdalocksmith.com. License verifiable through Florida DACS (Department of Agriculture and Consumer Services).
 
 ## Entity Disambiguation
 
@@ -8,7 +8,7 @@ Daniel Cerda Locksmith is an independent, locally owned and operated locksmith b
 
 ## Core Pages
 
-- [Homepage](https://dcerdalocksmith.com/): 24/7 locksmith in Sanford, FL — car lockouts, home lockouts, rekeying, key replacement, smart locks, commercial security. Licensed & insured. (855) 633-0750.
+- [Homepage](https://dcerdalocksmith.com/): 24/7 locksmith in Sanford, FL — car lockouts, home lockouts, rekeying, key replacement, smart locks, commercial security. Licensed & insured. (833) 632-3357.
 - [About Daniel Cerda](https://dcerdalocksmith.com/about): Owner biography, credentials (FL license, ALOA membership), 17 years experience, EEAT proof, 10,000+ jobs completed.
 - [All Services](https://dcerdalocksmith.com/services): Complete listing of all 13 locksmith services with descriptions and pricing.
 - [All Service Areas](https://dcerdalocksmith.com/service-areas): 7 cities served in Seminole and Volusia Counties — Sanford, Lake Mary, Longwood, Oviedo, DeBary, Winter Springs, Casselberry.
@@ -62,7 +62,7 @@ Direct pages exist for every service in every city, e.g.:
 - Business Type: Independent Local Locksmith
 - Founded: 2008
 - Years Operating: 18 years (as of 2026)
-- Phone: (855) 633-0750
+- Phone: (833) 632-3357
 - Address: 151 Wildwood Dr, Sanford, FL 32773-5572
 - County: Seminole County, Florida
 - Website: https://dcerdalocksmith.com

@@ -69,7 +69,7 @@ export const services: Service[] = [
       'locksmith close to me',
     ],
     metaTitle: 'Emergency Locksmith Near Me Sanford FL | 24/7, 20-Min Response',
-    metaDescription: 'Need an emergency locksmith near you in Sanford, FL? Daniel Cerda Locksmith responds in 20-30 minutes, 24/7. Licensed & insured. Call (855) 633-0750 now.',
+    metaDescription: 'Need an emergency locksmith near you in Sanford, FL? Daniel Cerda Locksmith responds in 20-30 minutes, 24/7. Licensed & insured. Call (833) 632-3357 now.',
     featured: true,
   },
   {
