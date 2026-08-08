@@ -57,7 +57,7 @@ export const homepageFAQs: FAQ[] = [
   },
   {
     question: 'How do I find a locksmith near me in Sanford, FL?',
-    answer: 'Daniel Cerda Locksmith is your closest local licensed locksmith in Sanford. Call (833) 632-3357 and we dispatch a technician to your exact location within 20-30 minutes — no need to search further.',
+    answer: 'Daniel Cerda Locksmith is your closest local licensed locksmith in Sanford. Call (575) 573-2625 and we dispatch a technician to your exact location within 20-30 minutes — no need to search further.',
     category: 'general',
   },
   {

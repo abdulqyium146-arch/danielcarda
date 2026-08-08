@@ -18,7 +18,7 @@ import { SITE } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Locksmith Near Me Sanford FL | Daniel Cerda — 24/7, 20-Min Response',
   description:
-    'Looking for a locksmith near you in Sanford, FL? Daniel Cerda Locksmith is your local licensed 24/7 locksmith — car lockouts, home lockouts, rekeying, car key replacement, smart locks. 20-minute response. Licensed & insured. Call (833) 632-3357.',
+    'Looking for a locksmith near you in Sanford, FL? Daniel Cerda Locksmith is your local licensed 24/7 locksmith — car lockouts, home lockouts, rekeying, car key replacement, smart locks. 20-minute response. Licensed & insured. Call (575) 573-2625.',
   keywords:
     'locksmith near me, locksmith sanford fl, emergency locksmith near me, 24 hour locksmith near me, car locksmith near me, car key replacement near me, locksmith close to me, mobile locksmith near me, residential locksmith near me, commercial locksmith near me, lock repair near me, key duplication near me, local locksmith, auto locksmith near me, locksmith near me open now',
   alternates: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Locksmith Near Me Sanford FL | Daniel Cerda — 24/7',
     description:
-      'Local licensed locksmith in Sanford, FL. Car lockouts, home rekeying, key replacement, smart locks. 20-30 minute response. Call (833) 632-3357.',
+      'Local licensed locksmith in Sanford, FL. Car lockouts, home rekeying, key replacement, smart locks. 20-30 minute response. Call (575) 573-2625.',
     url: SITE.url,
     type: 'website',
   },
