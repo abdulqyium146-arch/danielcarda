@@ -66,7 +66,7 @@ Even the best deadbolt can be compromised by poor installation. A deadbolt that'
 
 Daniel Cerda Locksmith provides [professional lock installation](/services/lock-installation) throughout [Sanford, FL](/service-areas/sanford-fl) and Seminole County. We ensure proper alignment, use reinforced strike plates, and test every installation thoroughly.
 
-**Ready to upgrade?** Book a [lock installation](/services/lock-installation) or call us at (575) 573-2625 for a free security assessment.
+**Ready to upgrade?** Book a [lock installation](/services/lock-installation) or call us at (917) 203-4678 for a free security assessment.
     `,
     date: '2024-10-15',
     author: 'Daniel Cerda',
@@ -119,7 +119,7 @@ If a child or pet is locked in a hot car, **call 911 immediately**. Florida temp
 
 Professional car lockout service from Daniel Cerda Locksmith starts at $65. We provide a firm quote over the phone before dispatching. There are no hidden fees.
 
-**Need help right now?** Request [car lockout service](/services/car-lockout) or [car key replacement](/services/car-key-replacement) — call (575) 573-2625, available 24/7.
+**Need help right now?** Request [car lockout service](/services/car-lockout) or [car key replacement](/services/car-key-replacement) — call (917) 203-4678, available 24/7.
     `,
     date: '2024-09-22',
     author: 'Daniel Cerda',
@@ -185,7 +185,7 @@ Absolutely. Some homeowners rekey the locks they want to keep and replace the on
 
 While rekeying kits exist for DIY use, improper rekeying can leave your lock partially functional or damage the cylinder — potentially requiring an expensive replacement anyway. [Professional rekeying](/services/rekeying) from Daniel Cerda Locksmith costs little more than a DIY kit and comes with the guarantee that the job is done right.
 
-Schedule your [rekeying](/services/rekeying) or [lock installation](/services/lock-installation) in [Sanford, FL](/service-areas/sanford-fl) — call (575) 573-2625.
+Schedule your [rekeying](/services/rekeying) or [lock installation](/services/lock-installation) in [Sanford, FL](/service-areas/sanford-fl) — call (917) 203-4678.
     `,
     date: '2024-08-10',
     author: 'Daniel Cerda',
@@ -260,7 +260,7 @@ Smart lock installation requires precise alignment, proper door prep, and config
 
 Daniel Cerda Locksmith handles [smart lock installation](/services/smart-lock-installation) for all major brands throughout [Sanford](/service-areas/sanford-fl) and Seminole County. We handle the full setup — including app configuration, code programming, and showing you how to use all the features.
 
-**Schedule your [smart lock installation](/services/smart-lock-installation)** or call (575) 573-2625 to discuss options.
+**Schedule your [smart lock installation](/services/smart-lock-installation)** or call (917) 203-4678 to discuss options.
     `,
     date: '2024-07-05',
     author: 'Daniel Cerda',
@@ -453,7 +453,7 @@ Choosing the right locksmith is a decision that directly affects the physical se
 
 The key signals of a trustworthy provider are consistent across every service type: a verifiable DACS license, general liability insurance, an upfront written quote, professional identification, and an itemized receipt. These are non-negotiable whether the job costs $75 or $750.
 
-**Daniel Cerda Locksmith is fully licensed, insured, and has served Sanford and Seminole County since 2008. Call (575) 573-2625 for 24/7 emergency service or a free security consultation.**
+**Daniel Cerda Locksmith is fully licensed, insured, and has served Sanford and Seminole County since 2008. Call (917) 203-4678 for 24/7 emergency service or a free security consultation.**
     `,
     date: '2026-06-09',
     author: 'Daniel Cerda',
